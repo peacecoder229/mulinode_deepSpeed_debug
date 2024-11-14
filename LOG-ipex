@@ -1,0 +1,117 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-03 22:31:25,324] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-11-03 22:31:27,130] [INFO] [runner.py:463:main] Using IP address of 10.242.51.166 for node 10.242.51.166
+['mpirun', '-ppn', '1', '-genv', 'PYTHONPATH', '/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference', '-genv', 'OMP_NUM_THREADS', '128', '-genv', 'MASTER_ADDR', '10.242.51.166', '-genv', 'MASTER_PORT', '29500', '-genv', 'WORLD_SIZE', '2', '-genv', 'LOCAL_SIZE', '1', '-genv', 'I_MPI_PIN', '0', '-hosts', '10.242.51.166,10.242.51.116', '-n', '1', '-env', 'RANK', '0', '-env', 'LOCAL_RANK', '0', 'numactl', '-C', '0-127', '/root/miniforge3/envs/llm/bin/python', '-u', 'run.py', '--benchmark', '-m', './saved_results/llama_8b_shard/', '--dtype', 'bfloat16', '--greedy', '--ipex', '--input-tokens', '1024', '--num-iter', '1', '--batch-size', '1', '--max-new-tokens', '56', '--token-latency', '--autotp', ':', '-n', '1', '-env', 'RANK', '1', '-env', 'LOCAL_RANK', '0', 'numactl', '-C', '0-127', '/root/miniforge3/envs/llm/bin/python', '-u', 'run.py', '--benchmark', '-m', './saved_results/llama_8b_shard/', '--dtype', 'bfloat16', '--greedy', '--ipex', '--input-tokens', '1024', '--num-iter', '1', '--batch-size', '1', '--max-new-tokens', '56', '--token-latency', '--autotp']
+[2024-11-03 22:31:27,181] [INFO] [runner.py:568:main] cmd = mpirun -ppn 1 -genv PYTHONPATH /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference -genv OMP_NUM_THREADS 128 -genv MASTER_ADDR 10.242.51.166 -genv MASTER_PORT 29500 -genv WORLD_SIZE 2 -genv LOCAL_SIZE 1 -genv I_MPI_PIN 0 -hosts 10.242.51.166,10.242.51.116 -n 1 -env RANK 0 -env LOCAL_RANK 0 numactl -C 0-127 /root/miniforge3/envs/llm/bin/python -u run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --greedy --ipex --input-tokens 1024 --num-iter 1 --batch-size 1 --max-new-tokens 56 --token-latency --autotp : -n 1 -env RANK 1 -env LOCAL_RANK 0 numactl -C 0-127 /root/miniforge3/envs/llm/bin/python -u run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --greedy --ipex --input-tokens 1024 --num-iter 1 --batch-size 1 --max-new-tokens 56 --token-latency --autotp
+[mpiexec@JF5300-B11A346T] Launch arguments: /usr/bin/ssh -x 10.242.51.166 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_bstrap_proxy --upstream-host JF5300-B11A346T --upstream-port 42427 --pgid 0 --launcher ssh --launcher-number 0 --base-path /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 2 --debug --proxy-id 0 --node-id 0 --subtree-size 1 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+[mpiexec@JF5300-B11A346T] Launch arguments: /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_bstrap_proxy --upstream-host JF5300-B11A346T --upstream-port 42427 --pgid 0 --launcher ssh --launcher-number 0 --base-path /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 2 --debug --proxy-id 1 --node-id 1 --subtree-size 1 --upstream-fd 11 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+LLM RUNTIME INFO: running model geneartion with deepspeed (autotp)...
+LLM RUNTIME INFO: running model geneartion with deepspeed (autotp)...
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-03 22:31:29,952] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-03 22:31:30,051] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+Error.  nthreads cannot be larger than environment variable "NUMEXPR_MAX_THREADS" (64)Error.  nthreads cannot be larger than environment variable "NUMEXPR_MAX_THREADS" (64)[2024-11-03 22:31:31,102] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-03 22:31:31,102] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-11-03 22:31:31,102] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend ccl
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+[2024-11-03 22:31:31,250] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-03 22:31:31,250] [INFO] [comm.py:637:init_distributed] cdb=None
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.055442094802856445 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+*** Loading the model /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard
+[2024-11-03 22:31:31,621] [INFO] [utils.py:781:see_memory_usage] pre-from-pretrained
+[2024-11-03 22:31:31,621] [INFO] [utils.py:782:see_memory_usage] MA 0.63 GB         Max_MA 0.63 GB         CA 0.63 GB         Max_CA 1 GB 
+[2024-11-03 22:31:31,621] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 8.53 GB, percent = 1.7%
+[2024-11-03 22:31:31,778] [INFO] [utils.py:781:see_memory_usage] post-from-pretrained
+[2024-11-03 22:31:31,779] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-03 22:31:31,779] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 8.53 GB, percent = 1.7%
+[2024-11-03 22:31:31,905] [INFO] [utils.py:781:see_memory_usage] post-init-ds-zero-init
+[2024-11-03 22:31:31,905] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-03 22:31:31,905] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 8.53 GB, percent = 1.7%
+[2024-11-03 22:31:32,028] [INFO] [utils.py:781:see_memory_usage] pre-ds-inference-init
+[2024-11-03 22:31:32,029] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-03 22:31:32,029] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 8.53 GB, percent = 1.7%
+My guessed rank = 1
+My guessed rank = 0
+Time to load deepspeed_shm_comm op: 0.06185030937194824 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+*** Loading the model /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard
+[2024-11-03 22:31:32,962] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter mp_size is deprecated use tensor_parallel.tp_size instead
+[2024-11-03 22:31:32,964] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.4, git-hash=unknown, git-branch=unknown
+[2024-11-03 22:31:32,965] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter mp_size is deprecated use tensor_parallel.tp_size instead
+[2024-11-03 22:31:32,965] [INFO] [logging.py:96:log_dist] [Rank 0] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+AutoTP:  [(<class 'transformers.models.llama.modeling_llama.LlamaDecoderLayer'>, ['self_attn.o_proj', 'mlp.down_proj'])]
+Loading 34 checkpoint shards:   0%|          | 0/34 [00:00<?, ?it/s]/root/miniforge3/envs/llm/lib/python3.10/site-packages/deepspeed/module_inject/replace_module.py:616: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  sd = torch.load(checkpoint, map_location='cpu')
+AutoTP:  [(<class 'transformers.models.llama.modeling_llama.LlamaDecoderLayer'>, ['mlp.down_proj', 'self_attn.o_proj'])]
+Loading 34 checkpoint shards:   0%|          | 0/34 [00:00<?, ?it/s]/root/miniforge3/envs/llm/lib/python3.10/site-packages/deepspeed/module_inject/replace_module.py:616: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  sd = torch.load(checkpoint, map_location='cpu')
+Loading 34 checkpoint shards:   3%|▎         | 1/34 [00:00<00:11,  2.87it/s]Loading 34 checkpoint shards:   3%|▎         | 1/34 [00:00<00:12,  2.75it/s]Loading 34 checkpoint shards:   6%|▌         | 2/34 [00:00<00:08,  3.63it/s]Loading 34 checkpoint shards:   6%|▌         | 2/34 [00:00<00:09,  3.51it/s]Loading 34 checkpoint shards:   9%|▉         | 3/34 [00:00<00:07,  4.18it/s]Loading 34 checkpoint shards:   9%|▉         | 3/34 [00:00<00:07,  4.01it/s]Loading 34 checkpoint shards:  12%|█▏        | 4/34 [00:00<00:06,  4.63it/s]Loading 34 checkpoint shards:  12%|█▏        | 4/34 [00:00<00:06,  4.40it/s]Loading 34 checkpoint shards:  15%|█▍        | 5/34 [00:01<00:05,  4.95it/s]Loading 34 checkpoint shards:  15%|█▍        | 5/34 [00:01<00:06,  4.70it/s]Loading 34 checkpoint shards:  18%|█▊        | 6/34 [00:01<00:05,  5.12it/s]Loading 34 checkpoint shards:  18%|█▊        | 6/34 [00:01<00:05,  4.90it/s]Loading 34 checkpoint shards:  21%|██        | 7/34 [00:01<00:05,  5.29it/s]Loading 34 checkpoint shards:  21%|██        | 7/34 [00:01<00:05,  5.01it/s]Loading 34 checkpoint shards:  24%|██▎       | 8/34 [00:01<00:04,  5.40it/s]Loading 34 checkpoint shards:  24%|██▎       | 8/34 [00:01<00:05,  5.06it/s]Loading 34 checkpoint shards:  26%|██▋       | 9/34 [00:01<00:04,  5.48it/s]Loading 34 checkpoint shards:  26%|██▋       | 9/34 [00:01<00:04,  5.11it/s]Loading 34 checkpoint shards:  29%|██▉       | 10/34 [00:02<00:04,  5.61it/s]Loading 34 checkpoint shards:  29%|██▉       | 10/34 [00:02<00:04,  5.19it/s]Loading 34 checkpoint shards:  32%|███▏      | 11/34 [00:02<00:04,  5.69it/s]Loading 34 checkpoint shards:  32%|███▏      | 11/34 [00:02<00:04,  5.24it/s]Loading 34 checkpoint shards:  35%|███▌      | 12/34 [00:02<00:03,  5.78it/s]Loading 34 checkpoint shards:  35%|███▌      | 12/34 [00:02<00:04,  5.36it/s]Loading 34 checkpoint shards:  38%|███▊      | 13/34 [00:02<00:03,  5.78it/s]Loading 34 checkpoint shards:  38%|███▊      | 13/34 [00:02<00:03,  5.38it/s]Loading 34 checkpoint shards:  41%|████      | 14/34 [00:02<00:03,  5.78it/s]Loading 34 checkpoint shards:  41%|████      | 14/34 [00:02<00:03,  5.43it/s]Loading 34 checkpoint shards:  44%|████▍     | 15/34 [00:02<00:03,  5.78it/s]Loading 34 checkpoint shards:  47%|████▋     | 16/34 [00:03<00:03,  5.79it/s]Loading 34 checkpoint shards:  44%|████▍     | 15/34 [00:03<00:03,  5.46it/s]Loading 34 checkpoint shards:  50%|█████     | 17/34 [00:03<00:02,  5.73it/s]Loading 34 checkpoint shards:  47%|████▋     | 16/34 [00:03<00:03,  5.46it/s]Loading 34 checkpoint shards:  53%|█████▎    | 18/34 [00:03<00:02,  5.82it/s]Loading 34 checkpoint shards:  50%|█████     | 17/34 [00:03<00:03,  5.42it/s]Loading 34 checkpoint shards:  56%|█████▌    | 19/34 [00:03<00:02,  5.83it/s]Loading 34 checkpoint shards:  53%|█████▎    | 18/34 [00:03<00:02,  5.46it/s]Loading 34 checkpoint shards:  59%|█████▉    | 20/34 [00:03<00:02,  5.86it/s]Loading 34 checkpoint shards:  56%|█████▌    | 19/34 [00:03<00:02,  5.49it/s]Loading 34 checkpoint shards:  62%|██████▏   | 21/34 [00:03<00:02,  5.87it/s]Loading 34 checkpoint shards:  59%|█████▉    | 20/34 [00:03<00:02,  5.48it/s]Loading 34 checkpoint shards:  65%|██████▍   | 22/34 [00:04<00:02,  5.87it/s]Loading 34 checkpoint shards:  62%|██████▏   | 21/34 [00:04<00:02,  5.52it/s]Loading 34 checkpoint shards:  68%|██████▊   | 23/34 [00:04<00:01,  5.76it/s]Loading 34 checkpoint shards:  65%|██████▍   | 22/34 [00:04<00:02,  5.50it/s]Loading 34 checkpoint shards:  71%|███████   | 24/34 [00:04<00:01,  5.80it/s]Loading 34 checkpoint shards:  68%|██████▊   | 23/34 [00:04<00:02,  5.46it/s]Loading 34 checkpoint shards:  74%|███████▎  | 25/34 [00:04<00:01,  5.82it/s]Loading 34 checkpoint shards:  71%|███████   | 24/34 [00:04<00:01,  5.44it/s]Loading 34 checkpoint shards:  76%|███████▋  | 26/34 [00:04<00:01,  5.81it/s]Loading 34 checkpoint shards:  74%|███████▎  | 25/34 [00:04<00:01,  5.48it/s]Loading 34 checkpoint shards:  79%|███████▉  | 27/34 [00:04<00:01,  5.81it/s]Loading 34 checkpoint shards:  76%|███████▋  | 26/34 [00:05<00:01,  5.56it/s]Loading 34 checkpoint shards:  82%|████████▏ | 28/34 [00:05<00:01,  5.85it/s]Loading 34 checkpoint shards:  79%|███████▉  | 27/34 [00:05<00:01,  5.50it/s]Loading 34 checkpoint shards:  85%|████████▌ | 29/34 [00:05<00:00,  5.88it/s]Loading 34 checkpoint shards:  82%|████████▏ | 28/34 [00:05<00:01,  5.60it/s]Loading 34 checkpoint shards:  88%|████████▊ | 30/34 [00:05<00:00,  5.88it/s]Loading 34 checkpoint shards:  85%|████████▌ | 29/34 [00:05<00:00,  5.61it/s]Loading 34 checkpoint shards:  91%|█████████ | 31/34 [00:05<00:00,  5.82it/s]Loading 34 checkpoint shards:  88%|████████▊ | 30/34 [00:05<00:00,  5.47it/s]Loading 34 checkpoint shards:  94%|█████████▍| 32/34 [00:05<00:00,  5.85it/s]Loading 34 checkpoint shards:  91%|█████████ | 31/34 [00:05<00:00,  5.48it/s]Loading 34 checkpoint shards:  94%|█████████▍| 32/34 [00:06<00:00,  5.50it/s]Loading 34 checkpoint shards:  97%|█████████▋| 33/34 [00:06<00:00,  4.38it/s]Loading 34 checkpoint shards: 100%|██████████| 34/34 [00:06<00:00,  4.71it/s]Loading 34 checkpoint shards: 100%|██████████| 34/34 [00:06<00:00,  5.32it/s]
+Loading 34 checkpoint shards:  97%|█████████▋| 33/34 [00:06<00:00,  4.13it/s]Loading 34 checkpoint shards: 100%|██████████| 34/34 [00:06<00:00,  4.52it/s]Loading 34 checkpoint shards: 100%|██████████| 34/34 [00:06<00:00,  5.02it/s]
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+[2024-11-03 22:31:39,886] [INFO] [utils.py:781:see_memory_usage] post-ds-inference-init
+[2024-11-03 22:31:39,886] [INFO] [utils.py:782:see_memory_usage] MA 10.7 GB         Max_MA 10.7 GB         CA 10.7 GB         Max_CA 11 GB 
+[2024-11-03 22:31:39,886] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.62 GB, percent = 3.7%
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+[cli_0]: write_line error; fd=5 buf=:cmd=init pmi_version=1 pmi_subversion=1
+:
+system msg for write_line failure : Invalid argument
+[cli_0]: Unable to write to PMI_fd
+[cli_0]: write_line error; fd=5 buf=:cmd=get_appnum
+:
+system msg for write_line failure : Invalid argument
+Abort(1090319) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init: Unknown error class, error stack:
+MPIR_Init_thread(192): 
+MPID_Init(1538)......: 
+MPIR_pmi_init(131)...: PMI_Get_appnum returned -1
+[cli_0]: write_line error; fd=5 buf=:cmd=abort exitcode=1090319
+:
+system msg for write_line failure : Invalid argument
+
+LIBXSMM_VERSION: unconfigured (2147483647)
+SPR/SP      TRY    JIT    STA    COL
+   0..13      0      0      0      0 
+  14..23      0      0      0      0 
+  24..64      0      0      0      0 
+    > 64     32     32      0      0 
+Registry and code: 13 MB + 384 KB (gemm=32 meltw=6)
+Command: python /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/distributed/run_generation_with_deepspeed.py -m /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard --dtype bfloat16 --input-tokens 1024 --max-new-tokens 56 --num-iter 1 --num-warmup 10 --batch-size 1 --greedy --ipex --deployment-mode --benchmark --token-latency
+Uptime: 4.536879 s
+[cli_1]: readline failed
+[cli_1]: readline failed
+[cli_1]: readline failed
+Abort(1090319) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init: Unknown error class, error stack:
+MPIR_Init_thread(192): 
+MPID_Init(1538)......: 
+MPIR_pmi_init(131)...: PMI_Get_appnum returned -1
+[cli_1]: readline failed
+
+LIBXSMM_VERSION: unconfigured (2147483647)
+SPR/SP      TRY    JIT    STA    COL
+   0..13      0      0      0      0 
+  14..23      0      0      0      0 
+  24..64      0      0      0      0 
+    > 64     32     32      0      0 
+Registry and code: 13 MB + 384 KB (gemm=32 meltw=6)
+Command: python /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/distributed/run_generation_with_deepspeed.py -m /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard --dtype bfloat16 --input-tokens 1024 --max-new-tokens 56 --num-iter 1 --num-warmup 10 --batch-size 1 --greedy --ipex --deployment-mode --benchmark --token-latency
+Uptime: 4.738487 s
+LLM RUNTIME ERROR: Running generation task failed. Quit.
+LLM RUNTIME ERROR: Running generation task failed. Quit.

@@ -1,0 +1,85 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-13 04:54:34,621] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-11-13 04:54:36,546] [INFO] [runner.py:463:main] Using IP address of 10.242.51.116 for node JF5300-B11A346T
+nkbhat_dbg: IMPI calling get_cmd from multinode_runner
+['mpirun', '-ppn', '2', '-genv', 'PYTHONPATH', '/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference', '-genv', 'OMP_NUM_THREADS', '32', '-genv', 'MASTER_ADDR', '10.242.51.116', '-genv', 'MASTER_PORT', '29500', '-genv', 'WORLD_SIZE', '2', '-genv', 'LOCAL_SIZE', '2', '-genv', 'I_MPI_PIN', '0', '-hosts', 'JF5300-B11A346T', '-n', '1', '-env', 'RANK', '0', '-env', 'LOCAL_RANK', '0', 'numactl', '-m', '0', '-C', '0-31', '/root/miniforge3/envs/llm/bin/python', '-u', 'run.py', '--benchmark', '-m', './saved_results/llama_8b_shard', '--dtype', 'bfloat16', '--ipex', '--greedy', '--input-tokens', '1024', '--num-iter', '2', '--num-warmup', '1', '--batch-size', '1', '--max-new-tokens', '32', '--token-latency', '--autotp', ':', '-n', '1', '-env', 'RANK', '1', '-env', 'LOCAL_RANK', '1', 'numactl', '-m', '1', '-C', '32-63', '/root/miniforge3/envs/llm/bin/python', '-u', 'run.py', '--benchmark', '-m', './saved_results/llama_8b_shard', '--dtype', 'bfloat16', '--ipex', '--greedy', '--input-tokens', '1024', '--num-iter', '2', '--num-warmup', '1', '--batch-size', '1', '--max-new-tokens', '32', '--token-latency', '--autotp']
+[2024-11-13 04:54:36,590] [INFO] [runner.py:568:main] cmd = mpirun -ppn 2 -genv PYTHONPATH /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference -genv OMP_NUM_THREADS 32 -genv MASTER_ADDR 10.242.51.116 -genv MASTER_PORT 29500 -genv WORLD_SIZE 2 -genv LOCAL_SIZE 2 -genv I_MPI_PIN 0 -hosts JF5300-B11A346T -n 1 -env RANK 0 -env LOCAL_RANK 0 numactl -m 0 -C 0-31 /root/miniforge3/envs/llm/bin/python -u run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp : -n 1 -env RANK 1 -env LOCAL_RANK 1 numactl -m 1 -C 32-63 /root/miniforge3/envs/llm/bin/python -u run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+LLM RUNTIME INFO: running model geneartion with deepspeed (autotp)...
+LLM RUNTIME INFO: running model geneartion with deepspeed (autotp)...
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-13 04:54:38,877] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-13 04:54:38,885] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+nkbhat_dbg: reporting from init_distributed
+[2024-11-13 04:54:40,202] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-13 04:54:40,202] [INFO] [comm.py:638:init_distributed] cdb=None
+nkbhat_dbg: dist_init_required is True
+[2024-11-13 04:54:40,202] [INFO] [comm.py:670:init_distributed] Initializing TorchBackend in DeepSpeed with backend ccl
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+nkbhat_dbg: reporting from init_distributed
+[2024-11-13 04:54:40,225] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-13 04:54:40,225] [INFO] [comm.py:638:init_distributed] cdb=None
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.0611419677734375 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+*** Loading the model /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard
+[2024-11-13 04:54:40,637] [INFO] [utils.py:781:see_memory_usage] pre-from-pretrained
+[2024-11-13 04:54:40,637] [INFO] [utils.py:782:see_memory_usage] MA 0.63 GB         Max_MA 0.63 GB         CA 0.63 GB         Max_CA 1 GB 
+[2024-11-13 04:54:40,637] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.95 GB, percent = 2.4%
+[2024-11-13 04:54:40,789] [INFO] [utils.py:781:see_memory_usage] post-from-pretrained
+[2024-11-13 04:54:40,789] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 04:54:40,790] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.95 GB, percent = 2.4%
+[2024-11-13 04:54:40,903] [INFO] [utils.py:781:see_memory_usage] post-init-ds-zero-init
+[2024-11-13 04:54:40,903] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 04:54:40,903] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.95 GB, percent = 2.4%
+[2024-11-13 04:54:41,014] [INFO] [utils.py:781:see_memory_usage] pre-ds-inference-init
+[2024-11-13 04:54:41,015] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 04:54:41,015] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.95 GB, percent = 2.4%
+My guessed rank = 0
+[cli_0]: Error reading initack on 11
+Error on readline:: Bad file descriptor
+[cli_0]: readline failed
+[cli_0]: readline failed
+[cli_0]: readline failed
+[cli_0]: readline failed
+Abort(1090319) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Unknown error class, error stack:
+MPIR_Init_thread(192): 
+MPID_Init(1538)......: 
+MPIR_pmi_init(131)...: PMI_Get_appnum returned -1
+[cli_0]: readline failed
+My guessed rank = 1
+[cli_1]: Error reading initack on 12
+Error on readline:: Connection reset by peer
+[cli_1]: write_line error; fd=12 buf=:cmd=abort exitcode=-1
+:
+system msg for write_line failure : Broken pipe
+[cli_1]: write_line error; fd=12 buf=:cmd=abort exitcode=-1
+:
+system msg for write_line failure : Broken pipe
+[cli_1]: write_line error; fd=12 buf=:cmd=get_maxes
+:
+system msg for write_line failure : Broken pipe
+[cli_1]: write_line error; fd=12 buf=:cmd=get_appnum
+:
+system msg for write_line failure : Broken pipe
+Abort(1090319) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Unknown error class, error stack:
+MPIR_Init_thread(192): 
+MPID_Init(1538)......: 
+MPIR_pmi_init(131)...: PMI_Get_appnum returned -1
+[cli_1]: write_line error; fd=12 buf=:cmd=abort exitcode=1090319
+:
+system msg for write_line failure : Broken pipe
+LLM RUNTIME ERROR: Running generation task failed. Quit.
+LLM RUNTIME ERROR: Running generation task failed. Quit.

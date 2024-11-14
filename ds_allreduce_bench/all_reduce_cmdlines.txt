@@ -1,0 +1,14 @@
+ 1203  vim ds_comm_bench.py 
+ 1207  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex
+ 1208  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex >& LOG
+ 1211  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex >& LOG
+ 1212  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex
+ 1213  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex >& LOG
+ 1215  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 512*2048*2048
+ 1216  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-63,64-127 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 2147483648
+ 1217  deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-31,32-63 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 2147483648
+ 1218  deepspeed --profile --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-31,32-63 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 2147483648 
+ 1220  deepspeed --profile --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-31,32-63 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 2147483648 
+ 1221  DEEPSPEED_LOG_LEVEL='DEBUG' deepspeed --num_gpus 2 --master_addr 10.45.136.99 --bind_cores_to_rank --bind_core_list 0-31,32-63 ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex  --elements 2147483648 
+ 1257  history | grep ds_comm_bench.py
+ 1258  history | grep ds_comm_bench.py > all_reduce_cmdlines.txt

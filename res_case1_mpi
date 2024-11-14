@@ -1,0 +1,53 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-13 08:46:37,307] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-11-13 08:46:39,184] [INFO] [runner.py:463:main] Using IP address of 10.242.51.116 for node JF5300-B11A346T
+nkbhat_dbg: IMPI calling get_cmd from multinode_runner
+['mpirun', '-ppn', '1', '-genv', 'PYTHONPATH', '/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference', '-genv', 'OMP_NUM_THREADS', '64', '-genv', 'MASTER_ADDR', '10.242.51.116', '-genv', 'MASTER_PORT', '29500', '-genv', 'WORLD_SIZE', '1', '-genv', 'LOCAL_SIZE', '1', '-genv', 'I_MPI_PIN', '0', '-hosts', 'JF5300-B11A346T', '-n', '1', '-env', 'RANK', '0', '-env', 'LOCAL_RANK', '0', 'numactl', '-C', '0-63', '/root/miniforge3/envs/llm/bin/python', '-u', 'run.py', '--benchmark', '-m', './saved_results/llama_8b_shard', '--dtype', 'bfloat16', '--ipex', '--greedy', '--input-tokens', '1024', '--num-iter', '2', '--num-warmup', '1', '--batch-size', '1', '--max-new-tokens', '32', '--token-latency', '--autotp']
+[2024-11-13 08:46:39,214] [INFO] [runner.py:568:main] cmd = mpirun -ppn 1 -genv PYTHONPATH /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference -genv OMP_NUM_THREADS 64 -genv MASTER_ADDR 10.242.51.116 -genv MASTER_PORT 29500 -genv WORLD_SIZE 1 -genv LOCAL_SIZE 1 -genv I_MPI_PIN 0 -hosts JF5300-B11A346T -n 1 -env RANK 0 -env LOCAL_RANK 0 numactl -C 0-63 /root/miniforge3/envs/llm/bin/python -u run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+LLM RUNTIME INFO: running model geneartion with deepspeed (autotp)...
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-13 08:46:41,583] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+nkbhat_dbg: reporting from init_distributed
+[2024-11-13 08:46:42,837] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-13 08:46:42,837] [INFO] [comm.py:638:init_distributed] cdb=None
+nkbhat_dbg: dist_init_required is True
+[2024-11-13 08:46:42,837] [INFO] [comm.py:670:init_distributed] Initializing TorchBackend in DeepSpeed with backend ccl
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.06355595588684082 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+*** Loading the model /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/saved_results/llama_8b_shard
+[2024-11-13 08:46:43,222] [INFO] [utils.py:781:see_memory_usage] pre-from-pretrained
+[2024-11-13 08:46:43,222] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 08:46:43,222] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.18 GB, percent = 2.2%
+Loading checkpoint shards:   0%|          | 0/34 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 2/34 [00:00<00:01, 17.45it/s]Loading checkpoint shards:  12%|█▏        | 4/34 [00:00<00:01, 17.49it/s]Loading checkpoint shards:  18%|█▊        | 6/34 [00:00<00:01, 17.51it/s]Loading checkpoint shards:  24%|██▎       | 8/34 [00:00<00:01, 17.42it/s]Loading checkpoint shards:  29%|██▉       | 10/34 [00:00<00:01, 17.46it/s]Loading checkpoint shards:  35%|███▌      | 12/34 [00:00<00:01, 17.46it/s]Loading checkpoint shards:  41%|████      | 14/34 [00:00<00:01, 17.49it/s]Loading checkpoint shards:  47%|████▋     | 16/34 [00:00<00:01, 17.60it/s]Loading checkpoint shards:  53%|█████▎    | 18/34 [00:01<00:00, 17.82it/s]Loading checkpoint shards:  59%|█████▉    | 20/34 [00:01<00:00, 17.95it/s]Loading checkpoint shards:  65%|██████▍   | 22/34 [00:01<00:00, 18.07it/s]Loading checkpoint shards:  71%|███████   | 24/34 [00:01<00:00, 18.13it/s]Loading checkpoint shards:  76%|███████▋  | 26/34 [00:01<00:00, 18.18it/s]Loading checkpoint shards:  82%|████████▏ | 28/34 [00:01<00:00, 17.67it/s]Loading checkpoint shards:  88%|████████▊ | 30/34 [00:01<00:00, 17.83it/s]Loading checkpoint shards:  94%|█████████▍| 32/34 [00:01<00:00, 17.97it/s]Loading checkpoint shards: 100%|██████████| 34/34 [00:01<00:00, 18.10it/s]Loading checkpoint shards: 100%|██████████| 34/34 [00:01<00:00, 17.82it/s]
+[2024-11-13 08:46:45,250] [INFO] [utils.py:781:see_memory_usage] post-from-pretrained
+[2024-11-13 08:46:45,250] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 08:46:45,250] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.18 GB, percent = 2.2%
+[2024-11-13 08:46:45,360] [INFO] [utils.py:781:see_memory_usage] post-init-ds-zero-init
+[2024-11-13 08:46:45,360] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 08:46:45,360] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.18 GB, percent = 2.2%
+[2024-11-13 08:46:45,467] [INFO] [utils.py:781:see_memory_usage] pre-ds-inference-init
+[2024-11-13 08:46:45,468] [INFO] [utils.py:782:see_memory_usage] MA 0.64 GB         Max_MA 0.64 GB         CA 0.64 GB         Max_CA 1 GB 
+[2024-11-13 08:46:45,468] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 11.18 GB, percent = 2.2%
+My guessed rank = 0
+[cli_0]: Error reading initack on 11
+Error on readline:: Bad file descriptor
+[cli_0]: readline failed
+[cli_0]: readline failed
+[cli_0]: readline failed
+[cli_0]: readline failed
+Abort(1090319) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Unknown error class, error stack:
+MPIR_Init_thread(192): 
+MPID_Init(1538)......: 
+MPIR_pmi_init(131)...: PMI_Get_appnum returned -1
+[cli_0]: readline failed
+LLM RUNTIME ERROR: Running generation task failed. Quit.

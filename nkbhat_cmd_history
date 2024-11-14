@@ -1,0 +1,999 @@
+   85  deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 10 --warmup 2 --ccl 
+   86  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+   87  deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 10 --warmup 2 --ccl 
+   88  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+   89  deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 10 --warmup 2 --ccl 
+   90  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+   91  deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype fp32 --count 10 --warmup 2 --ccl 
+   92  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+   93  deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype fp32 --count 10 --warmup 2 --ccl 
+   94  history | grep Master
+   95  history | grep master
+   96  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench.py --dtype bf16 --count 5 --warmup 2 --ccl
+   97  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl
+   98  history
+   99  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  100  pwd
+  101  pip list | grep deepspeed
+  102  pwd
+  103  cd ../../
+  104  vim ./tools/env_setup.sh 
+  105  pwd
+  106  vim ./tools/env_setup.sh 
+  107  pwd
+  108  cd oneCCL_release/
+  109  ls
+  110  cd env/
+  111  ls
+  112  vim setvars.sh 
+  113  cat setvars.sh 
+  114  echo $CPATH
+  115  echo $FI_PROVIDER_PATH
+  116  echo $I_MPI_ROOT
+  117  echo $PATH
+  118  pwd
+  119  cd ..
+  120  ls
+  121  cd opt/
+  122  ls
+  123  cd ..
+  124  pwd
+  125  cd ..
+  126  vim oneccl_env.txt
+  127  history
+  128  ls -ltr
+  129  vim README.md 
+  130  history  > cmdlines
+  131  vim ds_comm_bench_compare_matmul_vs_
+  132  cd inference/ds_allreduce_bench/
+  133  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  134  history
+  135  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl
+  136  history
+  137  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  138  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096
+  139  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  140  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096
+  141  scp ds_comm_bench_compare_matmul_vs_allreduce.py root@10.242.51.166:/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench/
+  142  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096
+  143  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  144  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 2048
+  145  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096
+  146  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096 --ipex
+  147  lscpu
+  148  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+  149  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+  150  pwd
+  151  vim ccl_func.sh
+  152  source ccl_func.sh 
+  153  vim ccl_func.sh
+  154  ccl_config 8
+  155  echo $CCL_WORKER_COUNT 
+  156  echo $LD_LIBRARY_PATH 
+  157  build_launch_arg 
+  158  deepspeed  --launcher impi --launcher_args "--genv LD_LIBRARY_PATH=${LD_LIBRARY_PATH} $margs -l " --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-60,64-123 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+  159  vim README.md 
+  160  deepspeed  --launcher impi --launcher_args  --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-60,64-123 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+  161  deepspeed  --launcher impi   --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-60,64-123 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+  162  vim ccl_func.sh 
+  163  history
+  164  ls -ltr
+  165  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096 --ipex
+  166  vim ccl_func.sh 
+  167  source ccl_func.sh 
+  168  unset_ccl_config 
+  169  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096 --ipex
+  170  history  | grep host
+  171   deepspeed  -H ./hostfile  --launcher impi --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype fp32 --count 10 --warmup 2 --ccl
+  172  history
+  173  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096 --ipex
+  174  history
+  175  deepspeed   -H ./hostfile --launcher impi   --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096 --ipex
+  176  deepspeed   -H ./hostfile --launcher impi   --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 68096 --computeSz 4096
+  177  history
+  178  deepspeed  --launcher impi --master_addr  10.242.51.90 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+  179  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+  180  history > cmdlines
+  181  vim cmdlines 
+  182  vim ccl_func.sh 
+  183  export CCL_LOG_LEVEL=info
+  184  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+  185  vim ccl_func.sh 
+  186  export CCL_ATL_TRANSPORT=mpi
+  187  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+  188  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256
+  189  ip addr
+  190  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 >& LOG
+  191  vim LOG 
+  192  ip r
+  193  vim LOG 
+  194  vim ccl_func.sh 
+  195  source ccl_func.sh 
+  196  vim ccl_func.sh 
+  197  ccl_config 4
+  198  echo $CCL_WORKER_AFFINITY 
+  199  deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-27,32-59 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 
+  200  vim ccl_func.sh 
+  201  history 
+  202  history | grep launcher
+  203  vim ccl_func.sh 
+  204  build_launch_arg
+  205  deepspeed  --launcher impi -H ./hostfile  --launcher_args "--genv LD_LIBRARY_PATH=${LD_LIBRARY_PATH} $margs -l " --bind_cores_to_rank --bind_core_list 0-27,32-59 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 
+  206  vim ccl_func.sh 
+  207  source ccl_func.sh 
+  208  ccl_config 4
+  209  build_launch_arg 
+  210  vim ccl_func.sh 
+  211  echo $margs 
+  212  deepspeed  --launcher impi -H ./hostfile  --launcher_args "--genv LD_LIBRARY_PATH=${LD_LIBRARY_PATH} $margs -l " --bind_cores_to_rank --bind_core_list 0-27,32-59 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 
+  213  lscpu
+  214  vim hostfile
+  215  ip r
+  216  deepspeed  --launcher impi -H ./hostfile  --launcher_args "--genv LD_LIBRARY_PATH=${LD_LIBRARY_PATH} $margs -l " --bind_cores_to_rank --bind_core_list   0-27,32-59 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 
+  217  history
+  218  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-27,32-59 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 
+  219  vim ccl_func.sh 
+  220  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 >& LOG
+  221  vim LOG 
+  222  ip r
+  223  vi ccl_func.sh 
+  224  export I_MPI_DEBUG=10
+  225  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 >& LOG
+  226  vim LOG 
+  227  ls -ltr
+  228  ip r
+  229  vim LOG 
+  230  vim /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc//tuning_clx-ap_ofi.dat 
+  231  vim ccl_func.sh 
+  232  I_MPI_DEBUG=3
+  233  export I_MPI_DEBUG=3
+  234  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 >& LOG
+  235  vim LOG 
+  236  export I_MPI_MULTIRAIL=1
+  237  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256
+  238  deepspeed  --launcher impi -H ./hostfile  --bind_cores_to_rank --bind_core_list   0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 256 >& LOG
+  239  vim LOG 
+  240  pwd
+  241  cd ..
+  242  pwd
+  243  cd ..
+  244  vim ./tools/env_setup.sh 
+  245  ls -ltr
+  246  cd inference/
+  247  cd saved_results/
+  248  ls
+  249  pwd
+  250  cd ../ds_allreduce_bench/
+  251  vim ccl_func.sh 
+  252  ip r
+  253  vim hostfile
+  254  ssh 10.242.51.166
+  255  vim LOG 
+  256  pwd
+  257  cd /rocknvme/perf_bkm/
+  258  ls
+  259  cd ..
+  260  ls -ltr
+  261  cd spdk-bench/
+  262  ls -ltr
+  263  make init
+  264  python --version
+  265  yum install epel-release
+  266  pip install meson
+  267  make init
+  268  pip install pyelftools
+  269  make init
+  270  yum install ninja-build
+  271  pip install ninja
+  272  make init
+  273  yum install libuuid-devel
+  274  make init
+  275  yum install libaio-devel
+  276  make init
+  277  yum install ncurses-devel
+  278  make init
+  279  yum install CUnit-devel
+  280  make init
+  281  yum install cmake
+  282  yum groupinstall "Development Tools"
+  283  make init 
+  284  which ninja-build 
+  285  make clean
+  286  pushd /rocknvme/spdk-bench/rdma-core/build
+  287  ls
+  288  ls -ltr
+  289  rm -rf *
+  290  popd
+  291  make init 
+  292  yum install libnl3-devel
+  293  make clean
+  294  make init 
+  295  yum install libuuid-devel numactl-devel
+  296  make clean
+  297  make init 
+  298  yum install rdma-core-devel
+  299  make clean 
+  300  make init 
+  301  history | grep "yum install" 
+  302  history | grep "yum install"  | awk '{$1="" ; print($0)}'
+  303  pwd
+  304  cd ../perf_bkm/systemprogram/Codesample/
+  305  ls -ltr
+  306  vim memory_use_alarm.py 
+  307  python memory_use_alarm.py 
+  308  vim memory_use_alarm.py 
+  309  python memory_use_alarm.py 
+  310  vim memory_use_alarm.py 
+  311  python memory_use_alarm.py 
+  312  vim memory_use_alarm.py 
+  313  python memory_use_alarm.py 
+  314  vim memory_use_alarm.py 
+  315  python memory_use_alarm.py 
+  316  vim memory_use_alarm.py 
+  317  python memory_use_alarm.py 
+  318  vim memory_use_alarm.py 
+  319  python memory_use_alarm.py 
+  320  vim memory_use_alarm.py 
+  321  python memory_use_alarm.py 
+  322  vim fibonnaci_memo_vs_no_memo.py
+  323  python fibonnaci_memo_vs_no_memo.py
+  324  vim fibonnaci_memo_vs_no_memo.py
+  325  python fibonnaci_memo_vs_no_memo.py
+  326  vim fibonnaci_memo_vs_no_memo.py
+  327  python fibonnaci_memo_vs_no_memo.py
+  328  vim fibonnaci_memo_vs_no_memo.py
+  329  python fibonnaci_memo_vs_no_memo.py
+  330  vim fibonnaci_memo_vs_no_memo.py
+  331  python fibonnaci_memo_vs_no_memo.py
+  332  vim fibonnaci_memo_vs_no_memo.py
+  333  python fibonnaci_memo_vs_no_memo.py
+  334  vim fibonnaci_memo_vs_no_memo.py
+  335  python fibonnaci_memo_vs_no_memo.py
+  336  vim fibonnaci_memo_vs_no_memo.py
+  337  python fibonnaci_memo_vs_no_memo.py
+  338  vim fibonnaci_memo_vs_no_memo.py
+  339  python fibonnaci_memo_vs_no_memo.py
+  340  vim fibonnaci_memo_vs_no_memo.py
+  341  python fibonnaci_memo_vs_no_memo.py
+  342  pwd
+  343  cd ../../
+  344  cd colocframework/
+  345  ls -ltr
+  346  vim auto_solo_sweep_mlc_with_2nd_dx.sh
+  347  pwd
+  348  vim auto_solo_sweep_mlc_with_2nd_dx.sh
+  349  grep -rl "rdma" *
+  350  vim spdk_rdma_scripts/test_rdma_loop.sh 
+  351  ip r
+  352  ip addr
+  353  ethtool -i ens11np0
+  354  rdma link
+  355  ibv_devinfo
+  356  yum install rdma-core
+  357  ps aux | grep 419214
+  358  kill -9 419214
+  359  yum clean all
+  360  yum install rdma-core
+  361  ibv_devinfo
+  362  sudo ibv_devinfo
+  363  rpm -qa | grep rdma-core
+  364  sudo find / -name ibv_devinfo
+  365  /rocknvme/root/rdma-core/build/bin/ibv_devinfo
+  366  lsmod | grep mlx5
+  367  modinfo mlx5_core
+  368  modinfo mlx5_ib
+  369  cd /rocknvme/root/mini-pcm/
+  370  vim global.h 
+  371  pwd
+  372  cd ../
+  373  ls
+  374  ls -ltr
+  375  python --version
+  376  pip install openpyxl
+  377  pwd
+  378  ls -ltr
+  379  pwd
+  380  cd mini-pcm/
+  381  git branch -a
+  382  git log
+  383  vim Makefile 
+  384  make imc_ntnx 
+  385  vim IMC-raw.cpp
+  386  make
+  387  make imc_ntnx 
+  388  vim Makefile 
+  389   ./IMC-raw.x -e imc/config=0x000000000000f005,name=UNC_M_CAS_COUNT.WR -e imc/config=0x000000000000cf05,name=UNC_M_CAS_COUNT.RD  -e imc/config=0x0000000000000082,name=UNC_M_WPQ_OCCUPANCY_PCH0 -e imc/config=0x0000000000000080,name=UNC_M_RPQ_OCCUPANCY_PCH0 -d 1
+  390  vim functions.h 
+  391  vim IMC-raw.cpp
+  392  make
+  393  vim Makefile 
+  394  make spr_cmdformula 
+  395  vim Makefile 
+  396  make spr_cmdformula 
+  397  vim IMC-raw.cpp
+  398  vim functions.h 
+  399  pwd
+  400  vim IMC-raw.cpp
+  401  vim Makefile 
+  402  vim utils.cpp 
+  403  vim Makefile 
+  404  vim IMC-raw.cpp
+  405  vim Makefile 
+  406  make spr_cmdformula 
+  407  vim Makefile 
+  408  make spr_cmdformula 
+  409  vim Makefile 
+  410  make spr_cmdformula 
+  411  vim functions.h 
+  412  vim IMC-raw.cpp
+  413  pwd
+  414  cd ../../perf_bkm/systemprogram/Codesample/
+  415  vim find_index_targetsum.py
+  416  python find_index_targetsum.py 
+  417  vim find_index_targetsum.py
+  418  python find_index_targetsum.py 
+  419  vim find_index_targetsum.py
+  420  pwd
+  421  vim find_index_targetsum.py
+  422  python find_index_targetsum.py 
+  423  vim find_longest_uniquechars_in_string.py
+  424  chmod +x find_longest_uniquechars_in_string.py 
+  425  ./find_longest_uniquechars_in_string.py 
+  426  vim find_longest_uniquechars_in_string.py
+  427  ./find_longest_uniquechars_in_string.py 
+  428  vim find_longest_uniquechars_in_string.py
+  429  clear
+  430  ./find_longest_uniquechars_in_string.py 
+  431  vim find_longest_uniquechars_in_string.py
+  432  pwd
+  433  vim find_longest_uniquechars_in_stringv2.py 
+  434  python find_longest_uniquechars_in_stringv2.py 
+  435  pwd
+  436  cd  /rocknvme/root/memc_redis/
+  437  ls -ltr
+  438  pwd
+  439  cd ../../perf_bkm/memc_redis/
+  440  ls -ltr
+  441  pwd
+  442  history | grep multi
+  443  vim README.md 
+  444  ./multi_iter_run_mc_rds.sh --iter 2   --recordnum 500000 --accessnum 100000 --lcore 0-7 --res_dir res_dir --ins 1 --mccon 50 --type redis --memtiercore 64 --benchdir /rocknvme/root/memc_redis --ratio 1:10 --dsize 64 --pipe 4 --servIP 127.0.0.1
+  445  cp -r /old_rhel/root/.config/  /root/
+  446  htop
+  447  ./multi_iter_run_mc_rds.sh --iter 2   --recordnum 500000 --accessnum 100000 --lcore 0-7 --res_dir res_dir --ins 1 --mccon 50 --type redis --memtiercore 64 --benchdir /rocknvme/root/memc_redis --ratio 1:10 --dsize 64 --pipe 4 --servIP 127.0.0.1
+  448  history | gre mlc
+  449  history | grep mlc
+  450  mlc --loaded_latency -W5 -k0-7 -c63 -d0 -t140 -b20048
+  451  pwd
+  452  zcat /proc/config.gz | grep CONFIG_FRAME_POINTER
+  453  zgrep CONFIG_FRAME_POINTER /boot/config-$(uname -r)
+  454  objdump -d /boot/vmlinuz-$(uname -r) | grep -q '\(movl %ebp,%esp\|push %rbp\)' && echo "Frame pointers might be enabled" || echo "Frame pointers are likely disabled"
+  455  objdump -d /boot/vmlinuz-$(uname -r) | grep  '\(movl %ebp,%esp\|push %rbp\)' && echo "Frame pointers might be enabled" || echo "Frame pointers are likely disabled"
+  456  pwd
+  457  cat /proc/sys/kernel/perf_event_paranoid 
+  458  perf evlist -v
+  459  vim /sys/devices/cpu/events/mem-stores 
+  460  ls  /sys/devices/cpu/events/
+  461  pwd
+  462  cd ../systemprogram/Codesample/
+  463  ls -ltr
+  464  vim find_index_for_a_target_sum.py
+  465  python find_index_for_a_target_sum.py 
+  466  vim find_index_for_a_target_sum.py
+  467  python find_index_for_a_target_sum.py 
+  468  vim find_index_for_a_target_sum.py
+  469  python find_index_for_a_target_sum.py 
+  470  vim find_index_for_a_target_sum.py
+  471  python find_index_for_a_target_sum.py 
+  472  vim find_index_for_a_target_sum.py
+  473  python find_index_for_a_target_sum.py 
+  474  vim find_index_for_a_target_sum.py
+  475  python find_index_for_a_target_sum.py 
+  476  vim find_index_for_a_target_sum.py
+  477  python find_index_for_a_target_sum.py 
+  478  vim find_index_for_a_target_sum.py
+  479  python find_index_for_a_target_sum.py 
+  480  vim find_index_for_a_target_sum.py
+  481  python find_index_for_a_target_sum.py 
+  482  vim find_index_for_a_target_sum.py
+  483  python find_index_for_a_target_sum.py 
+  484  pwd
+  485  vim parenthesis_check.py
+  486  python parenthesis_check.py 
+  487  vim parenthesis_check.py
+  488  python parenthesis_check.py 
+  489  vim parenthesis_check.py
+  490  python parenthesis_check.py 
+  491  vim parenthesis_check.py
+  492  python parenthesis_check.py 
+  493  vim parenthesis_check.py
+  494  python parenthesis_check.py 
+  495  vim parenthesis_check.py
+  496  python parenthesis_check.py 
+  497  python stack.py
+  498  vim  stack.py
+  499  python stack.py 
+  500  vim  stack.py
+  501  python stack.py 
+  502  vim  stack.py
+  503  python stack.py 
+  504  vim  stack.py
+  505  python stack.py 
+  506  vim  stack.py
+  507  python stack.py 
+  508  vim  stack.py
+  509  python stack.py 
+  510  vim  stack.py
+  511  python stack.py 
+  512  vim  stack.py
+  513  pwd
+  514  ls -ltr
+  515  pwd
+  516  cd ../..
+  517  pwd
+  518  cd /rocknvme/root/mini-pcm/
+  519  ls -ltr
+  520  vim IMC-raw.cpp
+  521  pwd
+  522  cd 
+  523  lsmod | grep ib
+  524  uname -r
+  525  cd /root/
+  526  ls
+  527  pwd
+  528  cat /etc/redhat-release 
+  529  cd 
+  530  wget https://www.mellanox.com/page/mlnx_ofed_eula?mtag=linux_sw_drivers&mrequest=downloads&mtype=ofed&mver=MLNX_OFED-24.07-0.6.1.0&mname=MLNX_OFED_LINUX-24.07-0.6.1.0-rhel9.0-x86_64.tgz
+  531  ls -lytr
+  532  ls -ltr
+  533  rm -f mlnx_ofed_eula\?mtag\=linux_sw_drivers 
+  534  ls -ltr
+  535  mkdir MLNX
+  536  mv MLNX_OFED_LINUX-24.07-0.6.1.0-rhel9.0-x86_64.tgz  MLNX
+  537  cd MLNX/
+  538  tar -xvf MLNX_OFED_LINUX-24.07-0.6.1.0-rhel9.0-x86_64.tgz 
+  539  ls
+  540  cd MLNX_OFED_LINUX-24.07-0.6.1.0-rhel9.0-x86_64/
+  541  ls -ltr
+  542  ./mlnxofedinstall 
+  543  yum install perl-core
+  544  yum install perl-core --nogpgcheck
+  545  ./mlnxofedinstall 
+  546  yum install gcc-gfortran tk
+  547  yum install gcc-gfortran tk --allowerasing 
+  548  yum install gcc-gfortran tk --allowerasing  --nogpgcheck
+  549  ./mlnxofedinstall 
+  550  ./mlnxofedinstall --add-kernel-support
+  551  yum install kernel-rpm-macros --nogpgcheck
+  552  ./mlnxofedinstall --add-kernel-support
+  553  ./mlnxofedinstall --add-kernel-support --skip-repo
+  554  ipmitool lan print 3
+  555  pwd
+  556  cd /rocknvme/root/mini-pcm/
+  557  ls -ltr
+  558  git log
+  559  ls -ltr
+  560  vim functions.h 
+  561  pwd
+  562  vim IMC-raw.cpp
+  563  vim functions.h 
+  564  pwd
+  565  cd ../
+  566  git clone https://github.com/langchain-ai/rag-from-scratch.git
+  567  pwd
+  568  python3 --version
+  569  ls
+  570  cd rag-from-scratch/
+  571  ls
+  572  vim rag_from_scratch_1_to_4.ipynb 
+  573  pip install langchain_community tiktoken langchain-openai langchainhub chromadb langchain youtube-transcript-api pytube
+  574  yum install python310
+  575  yum search python3
+  576  yum search python30
+  577  yum search python310
+  578  yum search python3.10
+  579  yum search python3
+  580  yum search python3 | less
+  581  yum install python3.11
+  582  yum install python3.11 --nogpgcheck
+  583  yum search python3.11
+  584  yum install python3.11-devel
+  585  yum install python3.11-devel --nogpgcheck
+  586  yum install python3.11-pip --nogpgcheck
+  587  yum groupinstall "Development Tools" --nogpgcheck
+  588  yum install gcc openssl-devel bzip2-devel libffi-devel --nogpgcheck
+  589  python3 --version
+  590  python3.11 --version
+  591  yum search python3.11-vir
+  592  python3.11 -n venv myenv
+  593  python3.11 -m venv myenv
+  594  source myenv/bin/activate
+  595  pip install langchain_community tiktoken langchain-openai langchainhub chromadb langchain youtube-transcript-api pytube
+  596  python3
+  597  pip install -U langsmith
+  598  vim API-key.txt
+  599  python3
+  600  export LANGCHAIN_TRACING_V2=true
+  601  cat API-key.txt 
+  602  export LANGCHAIN_API_KEY=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
+  603  vim API-key.txt 
+  604  cat API-key.txt 
+  606  pwd
+  607  python3 test-langchain.py 
+  608  vim test-langchain.py 
+  609  python3 test-langchain.py 
+  610  vim API-key.txt 
+  611  python3
+  612  openai migrate
+  613  pip install openai==0.28
+  614  python3
+  615  ls -ltr
+  616  vim test-langchain.py 
+  617  python3 test-langchain.py 
+  618  vim  test-langchain.py 
+  619  python3 test-langchain.py 
+  620  vim  test-langchain.py 
+  621  python3 test-langchain.py 
+  622  vim  test-langchain.py 
+  623  python3 test-langchain.py 
+  624  vim  test-langchain.py 
+  625  python3 test-langchain.py 
+  626  vim  test-langchain.py 
+  627  python3 test-langchain.py 
+  628  vim  test-langchain.py 
+  629  pip install --upgrade openai langsmith
+  630  python check-openai.py 
+  631  env | grep OPEN
+  632  python check-openai.py 
+  633  pwd
+  634  python check-openai.py 
+  635  pwd
+  636  cd ../../POC/
+  637  ls -ltr
+  638  cd memc_redis/
+  639  ls -ltr
+  640  vim SMT_sweep_study.sh 
+  641  pwd
+  642  cd /rocknvme/pytorch/pytorch/
+  643  find -type f -name "FlashAttenstion" -print
+  644  grep -rl "scaled_dot_product_attention" *
+  645  grep -rl "scaled_dot_product_attention" * | grep attention
+  646  history
+  647  pwd
+  648  find -type f -name "run_multi*" -print
+  649  cd ..
+  650  ls
+  651  pwd
+  652  cd ..
+  653  git clone https://github.com/intel-innersource/frameworks.ai.models.intel-models.git
+  654  ls -lr
+  655  cd frameworks.ai.models.intel-models/
+  656  ls -ltr
+  657  pwd
+  658  find -type f -name "run_multi*" -print
+  659  cd models_v2/
+  660  cd pytorch/
+  661  ls
+  662  cd llama/
+  663  cd inference/
+  664  cd cpu/
+  665  ls
+  666  vim run_model.sh 
+  667  pwd
+  668  cd /rocknvme/frameworks.ai.models.intel-models
+  669  du . -m
+  670  cd ..
+  671  git clone https://github.com/intel/ai-reference-models.git
+  672  cd ai-reference-models/
+  673  find -type f -name "run_model*" -print
+  674  find -type f -name "run_model*" -print | grep llama
+  675  vim ./models_v2/pytorch/llama/inference/cpu/run_model.sh 
+  676  cd ../frameworks.ai.models.intel-models/
+  677  find -type f -name "run_model*" -print | grep llama
+  678  diff ./models_v2/pytorch/llama/inference/cpu/run_model.sh ../ai-reference-models/models_v2/pytorch/llama/inference/cpu/run_model.sh
+  679  pwd
+  680  cd ../ai-reference-models/
+  681  git remote -v
+  682  vim models_v2/pytorch/llama/inference/cpu/run_model.sh 
+  683  cd models_v2/pytorch/llama/inference/cpu/
+  684  ls -ltr
+  685  vim setup.sh 
+  686  vim README.md 
+  687  vim setup.sh 
+  688  pwd
+  689  cd ../../../..
+  690  find -type f -name "enable_ipex_for_transformers.diff" -print
+  691  pwd
+  692  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/
+  693  ls -ltr
+  694  source ./tools/env_activate.sh inference
+  695  conda env list
+  696  conda activate llm
+  697  exit
+  698  ip r
+  699  uname -r
+  700  df -h
+  701  conda env list
+  702  tmux a -t llm
+  703  tmux new -s llm
+  704  tmux ls
+  705  tmux a -t llm
+  706  ip r
+  707  pwd
+  708  cd /rocknvme/POC/
+  709  ls -ltr
+  710  cd cpu_mem_micro/
+  711  ls
+  712  cd ..
+  713  ls
+  714  cd mini-pcm/
+  715  ls -ltr
+  716  pwd
+  717  cd ..
+  718  pwd
+  719  ip r
+  720  rm -rf memc_redis/
+  721  ls -ltr
+  722  git add -A
+  723  git status 
+  724  git branch -a
+  725  git commit -m "updated redis scripts"
+  726  git push origin master 
+  727  pwd
+  728  cd ..
+  729  ls -ltr
+  730  cd POC/
+  731  cd LLM_scripts_bkm/
+  732  ls
+  733  pwd
+  734  cd /rocknvme/perf_bkm/
+  735  ls -ltr
+  736  cd web_demo/
+  737  git remot -v
+  738  git remote -v
+  739  rm -rf .git
+  740  git remote -v
+  741  cd ..
+  742  ls -ltr
+  743  cd mem_micro/
+  744  ls
+  745  cd ..
+  746  ls -ltr
+  747  cd fio-spdk-scripts/
+  748  ls
+  749  cd ..
+  750  ls -ltr
+  751  ls -a
+  752  pwd
+  753  rm -rf .git
+  754  find . -name ".git" -type d -exec rm -rf {} +
+  755  ls -ltr
+  756  git remote -v
+  757  mv LLM_scripts_bkm/ /rocknvme/POC/
+  758  mv workingset/ /rocknvme/POC/
+  759  mv fio-spdk-scripts/ /rocknvme/POC/
+  760  mv web_demo/ /rocknvme/POC/
+  761  mv systemprogram/ /rocknvme/POC/
+  762  pwd
+  763  cd ../POC/
+  764  rm -rf workingset/
+  765  ip r
+  766  pwd
+  767  git add -A
+  768  git commit -m "Updated WSS"
+  769  git push origin master 
+  770  exit
+  771  ip r
+  772  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/
+  773  cd cpu/llm/inference/
+  774  vim ccl_func.sh 
+  775  cd /rocknvme/POC/
+  776  ls -ltr
+  777  cd google_test_cases/
+  778  ls -ltr
+  779  vim set_irq_affinity 
+  780  vim tune_mev.sh 
+  781  tmux ls
+  782  tmux a -t llm
+  783  cd /rocknvme/root/
+  784  ls -ltr
+  785  cd rdma-core/
+  786  git remote -v
+  787  cd ..
+  788  ls -ltr
+  789  cd Doc/
+  790  ls
+  791  cd ..
+  792  ls -ltr
+  793  cd AepRocksdb/
+  794  ls
+  795  ls -ltr
+  796  cd ..
+  797  ls -ltr
+  798  cd ..
+  799  find -type f -iname "*stress*" -print
+  800  find -type f -iname "*stress*" -print | grep app
+  801  find -type f -iname "*stressapp*" -print | grep app
+  802  find -type f -iname "*stressapp*" -print
+  803  vim ./perf_bkm/vm-frame-work/run_stressapp.sh
+  804  df -h
+  805  cd /old_rhel/
+  806  ls -ltr
+  807  find -type f -iname "*stressapp*" -print
+  808  vim ./root/rohan_exp/unit-tests/sweep_cas_benchmarks/stressapp-rn50.sh 
+  809  find -type d -iname "*stressapp*" -print
+  810  docker images
+  811  pwd
+  812  cd root
+  813  ls -ltr
+  814  vim server_affinity.sh 
+  815  vim bind-rdma-core.sh 
+  816  cp bind-rdma-core.sh /rocknvme/POC/
+  817  cd qperf/
+  818  ls
+  819  du . -m
+  820  vim README 
+  821  cd ..
+  822  mv qperf/ /rocknvme/POC/
+  823  ls -ltr
+  824  cd /rocknvme/
+  825  cd POC/
+  826  ls -lr
+  827  ls -ltr
+  828  mv bind-rdma-core.sh rcopy-rdma/
+  829  git pull
+  830  ls -ltr
+  831  git add -A
+  832  cd qperf/
+  833  git remote -v
+  834  vim README 
+  835  rm -rf .git/
+  836  cd ..
+  837  git add -A
+  838  git status 
+  839  git push origin master 
+  840  git status 
+  841  git commit -m "Add qperf and rcopy-rdma/bind-rdma-core.sh"
+  842  git push origin master 
+  843  pwd
+  844  cd ..
+  845  ls -ltr
+  846  cd cpu_mem_micro/
+  847  ls
+  848  cd ..
+  849  tmux ls
+  850  tmux a -t llm
+  851  tmux ls
+  852  tmux a -t llm
+  853  tmux ls
+  854  tmux a -t llm
+  855  tmux ls
+  856  tmux a -t llm
+  857  tmux ls
+  858  tmux a -t llm
+  859  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference
+  860  vim distributed/run_generation_with_deepspeed.py 
+  861  cd ds_allreduce_bench/
+  862  vim ds_comm_bench_compare_matmul_vs_allreduce.py
+  863  cd ..
+  864  vim distributed/run_generation_with_deepspeed.py 
+  865  vim ds_allreduce_bench/ds_comm_bench_compare_matmul_vs_allreduce.py
+  866  exit
+  867  tmux a -t llm
+  868  exit
+  869  ls -ltar
+  870  which mpirun
+  871  mkdir nkbhat_debug
+  872  cd nkbhat_debug/
+  873  ls -lt,ar
+  874  ls -ltar
+  875  cd ~
+  876  cat ~/hostfile 
+  877  whoami
+  878  ip
+  879  ipconfig
+  880  vim ~/.ssh/config 
+  881  cat ~/.ssh/config 
+  882  ssh node1
+  883  vim ~/.ssh/config 
+  884  ssh node2
+  885  vim /root/.ssh/known_hosts 
+  886  ssh node2
+  887  ls -ltar
+  888  tmux a -t llm
+  889  exit
+  890  tmux ls
+  891  tmux a -t llm
+  892  cd nkbhat_debug/
+  893  ls -ltar
+  894  tar -xvf openmpi-5.0.5.tar.gz openmpi-5.0.5/
+  895  cd openmpi-5.0.5/
+  896  ls -ltar
+  897  ./autogen.pl 
+  898  ls -ltar
+  899  mkdir build
+  900  cd build/
+  901  ../configure --prefix=`pwd`/install
+  902  make -j20 
+  903  make install -j20
+  904  ls -ltar
+  905  cd ..
+  906  ls -ltar
+  907  cd ..
+  908  ls -ltar
+  909  cd ..
+  910  ls -lta
+  911  rsync -azP ./nkbhat_debug/* node2:/root/nkbhat_debug/
+  912  ls -ltar
+  913  cd nkbhat_debug/openmpi-5.0.5/build/
+  914  ls -ltar
+  915  cd install/
+  916  ls -ltar
+  917  pwd
+  918  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+  919  which mpicc
+  920  cd ~
+  921  cd nkbhat_debug/openmpi-5.0.5/
+  922  cd ..
+  923  ls -ltar
+  924  which mpicc
+  925  mpicc -o hello hello.c 
+  926  ls -ltar
+  927  which mpicc
+  928  cd ..
+  929  ls -ltar
+  930  rsync -azP ./nkbhat_debug/ node2:/root/nkbhat_debug/
+  931  cd nkbhat_debug/openmpi-5.0.5/
+  932  cd ..
+  933  ls -ltar
+  934  which mpirun
+  935  mpirun -n 2 -ppn 2 ./hello
+  936  mpirun -n 2 ./hello
+  937  mpirun -n 2 --allow-run-as_root ./hello
+  938  mpirun -n 2 --allow-run-as-root ./hello
+  939  mpirun --help
+  940  man mpirun
+  941  mpirun -n 4 -N 2 --allow-run-as-root ./hello
+  942  mpirun -n 4 -N 2 -host host1,host2 --allow-run-as-root ./hello
+  943  mpirun -n 4 -N 2 -host host1 --allow-run-as-root ./hello
+  944  mpirun -n2 -N 2 -host host1 --allow-run-as-root ./hello
+  945  mpirun -n 2 -N 2 -host host1 --allow-run-as-root ./hello
+  946  mpirun -n 2 -N 2 -host node1 --allow-run-as-root ./hello
+  947  mpirun -n 2 -N 2 -host node1:2 --allow-run-as-root ./hello
+  948  mpirun -n 4 -N 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+  949  which mpirun
+  950  exit
+  951  ssh node2
+  952  exit
+  953  cat ~/.ssh/config 
+  954  ssh node1
+  955  exit
+  956  vim ~/.ssh/config 
+  957  cat ~/.ssh/config 
+  958  ssh node1
+  959  ssh node2
+  960  tmux a -t llm
+  961  vim ~/.ssh/config 
+  962  vim hostfile 
+  963  tmux a -t llm
+  964  vim ~/.ssh/config 
+  965  ssh node1
+  966  exit
+  967  tmux a -t llm
+  968  tmux ls
+  969  tmux a -t llm
+  970  ls -ltar
+  971  cd nkbhat_debug/
+  972  ls -ltar
+  973  cd impi
+  974  ls -ltar
+  975  cd debug/master/
+  976  pwd
+  977  pwdq!
+  978  ls -ltar
+  979  pwd
+  980  ls -ltar
+  981  cd ..
+  982  ls -ltar
+  983  cd ..
+  984  ls -ltar
+  985  ls -lta
+  986  rcd debug/
+  987  cd debug/
+  988  ls -ltar
+  989  cd master/
+  990  ls -ltar
+  991  readlink -f libmpi.so.12.0.0 libmpi.
+  992  cat ~/.ssh/config 
+  993  hostname
+  994  ssh node2
+  995  ssh JF5300-B11A319T 
+  996  hostname
+  997  exit
+  998  LS -LTAR
+  999  ls -ltar
+ 1000  mkdir inference_testing
+ 1001  cd inference_testing/
+ 1002  ls -ltar
+ 1003  git clone 
+ 1004  https://github.com/intel/intel-extension-for-pytorch.git
+ 1005  git clone 
+ 1006  https://github.com/intel/intel-extension-for-pytorch.git 
+ 1007  git clone git clone 
+ 1008  https://github.com/intel/intel-extension-for-pytorch.git  
+ 1009  git clone 
+ 1010  https://github.com/intel/intel-extension-for-pytorch.git 
+ 1011  git clone https://github.com/intel/intel-extension-for-pytorch.git ipex
+ 1012  cd ipex
+ 1013  git checkout v2.4.0+cpu
+ 1014  git submodule sync
+ 1015  git submodule update --init --recursive
+ 1016  conda create -n nkbhat_llm python=3.10 -y
+ 1017  ls -ltar
+ 1018  cd ..
+ 1019  conda activate nkbhat_llm
+ 1020  yum remove libstd-devel zstd
+ 1021  cd ipex/
+ 1022  ls -ltar
+ 1023  cd examples/cpu/llm/
+ 1024  ls -ltar
+ 1025  cd tools/
+ 1026  ls -ltar
+ 1027  ./env_setup.sh
+ 1028  chmod +x env_setup.sh 
+ 1029  ./env_setup.sh 
+ 1030  cd ..
+ 1031  ls -ltar
+ 1032  ./tools/env_setup.sh 
+ 1033  cd ..
+ 1034  ls -ltar
+ 1035  cd ..
+ 1036  ls -ltar
+ 1037  cd ..
+ 1038  ls
+ 1039  find ./* -iname compile_bundle.sh
+ 1040  cd ..
+ 1041  ls -ltar
+ 1042  rm -rf ./ipex
+ 1043  deactivate
+ 1044  conda deactivate
+ 1045  conda remove -n nkbhat_llm --all
+ 1046  ls -ltar
+ 1047  git clone https://github.com/intel/intel-extension-for-pytorch.git intel-extension-for-pytorch
+ 1048  cd intel-extension-for-pytorch/
+ 1049  ls -ltar
+ 1050  git checkout v2.4.0+cpu
+ 1051  git submodule sync
+ 1052  git submodule update --init --recursive
+ 1053  conda create -n nkbhat_llm python=3.10 -y
+ 1054  conda activate nkbhat_llm
+ 1055  yum remove libstd-devel zstd
+ 1056  cd examples/cpu/llm/
+ 1057  chmod +x ./tools/env_setup.sh 
+ 1058  ./tools/env_setup.sh 
+ 1059  python -m pip install torch==${VER_TORCH} --index-url https://download.pytorch.org/whl/cpu--proxy http://proxy-us.intel.com:912
+ 1060  python -m pip install intel-extension-for-pytorch==${VER_IPEX} oneccl-bind-pt==${VER_TORCHCCL} --extra-index-url https://pytorch-extension.intel.com/release-whl/stable/cpu/us/--proxy http://proxy-us.intel.com:912
+ 1061  python -m pip install torch==${VER_TORCH} --index-url
+ 1062  https://download.pytorch.org/whl/cpu
+ 1063  --proxy 
+ 1064  http://proxy-us.intel.com:912
+ 1065  python -m pip install torch==${VER_TORCH} --index-url https://download.pytorch.org/whl/cpu --proxy http://proxy-us.intel.com:912
+ 1066  VER_TORCH=$(python tools/yaml_utils.py -f dependency_version.yml -d pytorch -k version)
+ 1067  pef
+ 1068  pwd
+ 1069  cd tools
+ 1070  ls -ltar
+ 1071  vim env_setup.sh 
+ 1072  pwd
+ 1073  cd ..
+ 1074  ls
+ 1075  VER_TORCH=$(python tools/yaml_utils.py -f dependency_version.yml -d pytorch -k version) 
+ 1076  cd ~
+ 1077  cd nkbhat_debug/
+ 1078  ls -ltar
+ 1079  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1080  ls -ltar
+ 1081  which mpicc
+ 1082  hostname
+ 1083  pwd
+ 1084  history  > nkbhat_cmd_history

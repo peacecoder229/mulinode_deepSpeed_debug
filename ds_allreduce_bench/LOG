@@ -1,0 +1,18 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-03 21:59:55,064] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+usage: deepspeed [-h] [-H HOSTFILE] [-i INCLUDE] [-e EXCLUDE]
+                 [--num_nodes NUM_NODES]
+                 [--min_elastic_nodes MIN_ELASTIC_NODES]
+                 [--max_elastic_nodes MAX_ELASTIC_NODES] [--num_gpus NUM_GPUS]
+                 [--master_port MASTER_PORT] [--master_addr MASTER_ADDR]
+                 [--launcher LAUNCHER] [--launcher_args LAUNCHER_ARGS]
+                 [--module] [--no_python] [--no_local_rank] [--no_ssh_check]
+                 [--force_multi] [--save_pid]
+                 [--enable_each_rank_log ENABLE_EACH_RANK_LOG]
+                 [--autotuning {tune,run}] [--elastic_training]
+                 [--bind_cores_to_rank] [--bind_core_list BIND_CORE_LIST]
+                 [--ssh_port SSH_PORT]
+                 user_script ...
+deepspeed: error: unrecognized arguments: --verbose

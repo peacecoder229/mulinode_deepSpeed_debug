@@ -1,0 +1,25 @@
+
+
+#cmd to run an mpiexecutable
+
+I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts 10.242.51.166,10.242.51.116  /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/hellompi
+
+
+#Command to Run multinode with deepseed a microbench that does matrix mult and all_reduce
+cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench/
+CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+
+
+
+#Command to Run singleNode  inference with default
+cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference
+deepspeed  --num_gpus 2 --master_addr 10.242.51.116  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+
+
+#Command to Run multinode inference with default 
+cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference
+I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 
+#Command to Run multinode inference with CCL_ATL_TRANSPORT=ofi
+cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference
+ CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 2>&1 | tee  log-ofi

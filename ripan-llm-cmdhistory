@@ -1,0 +1,999 @@
+  839  ls
+  840  cd MLNX_OFED_LINUX-24.07-0.6.1.0-rhel9.0-x86_64/
+  841  ls -ltr
+  842  ./mlnxofedinstall 
+  843  yum install perl-core
+  844  yum install perl-core --nogpgcheck
+  845  ./mlnxofedinstall 
+  846  yum install gcc-gfortran tk
+  847  yum install gcc-gfortran tk --allowerasing 
+  848  yum install gcc-gfortran tk --allowerasing  --nogpgcheck
+  849  ./mlnxofedinstall 
+  850  ./mlnxofedinstall --add-kernel-support
+  851  yum install kernel-rpm-macros --nogpgcheck
+  852  ./mlnxofedinstall --add-kernel-support
+  853  ./mlnxofedinstall --add-kernel-support --skip-repo
+  854  ipmitool lan print 3
+  855  pwd
+  856  cd /rocknvme/root/mini-pcm/
+  857  ls -ltr
+  858  git log
+  859  ls -ltr
+  860  vim functions.h 
+  861  pwd
+  862  vim IMC-raw.cpp
+  863  vim functions.h 
+  864  pwd
+  865  cd ../
+  866  git clone https://github.com/langchain-ai/rag-from-scratch.git
+  867  pwd
+  868  python3 --version
+  869  ls
+  870  cd rag-from-scratch/
+  871  ls
+  872  vim rag_from_scratch_1_to_4.ipynb 
+  873  pip install langchain_community tiktoken langchain-openai langchainhub chromadb langchain youtube-transcript-api pytube
+  874  yum install python310
+  875  yum search python3
+  876  yum search python30
+  877  yum search python310
+  878  yum search python3.10
+  879  yum search python3
+  880  yum search python3 | less
+  881  yum install python3.11
+  882  yum install python3.11 --nogpgcheck
+  883  yum search python3.11
+  884  yum install python3.11-devel
+  885  yum install python3.11-devel --nogpgcheck
+  886  yum install python3.11-pip --nogpgcheck
+  887  yum groupinstall "Development Tools" --nogpgcheck
+  888  yum install gcc openssl-devel bzip2-devel libffi-devel --nogpgcheck
+  889  python3 --version
+  890  python3.11 --version
+  891  yum search python3.11-vir
+  892  python3.11 -n venv myenv
+  893  python3.11 -m venv myenv
+  894  source myenv/bin/activate
+  895  pip install langchain_community tiktoken langchain-openai langchainhub chromadb langchain youtube-transcript-api pytube
+  896  python3
+  897  pip install -U langsmith
+  898  vim API-key.txt
+  899  python3
+  900  export LANGCHAIN_TRACING_V2=true
+  901  cat API-key.txt 
+  902  export LANGCHAIN_API_KEY=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
+  903  vim API-key.txt 
+  904  cat API-key.txt 
+  906  pwd
+  907  python3 test-langchain.py 
+  908  vim test-langchain.py 
+  909  python3 test-langchain.py 
+  910  vim API-key.txt 
+  911  python3
+  912  openai migrate
+  913  pip install openai==0.28
+  914  python3
+  915  ls -ltr
+  916  vim test-langchain.py 
+  917  python3 test-langchain.py 
+  918  vim  test-langchain.py 
+  919  python3 test-langchain.py 
+  920  vim  test-langchain.py 
+  921  python3 test-langchain.py 
+  922  vim  test-langchain.py 
+  923  python3 test-langchain.py 
+  924  vim  test-langchain.py 
+  925  python3 test-langchain.py 
+  926  vim  test-langchain.py 
+  927  python3 test-langchain.py 
+  928  vim  test-langchain.py 
+  929  pip install --upgrade openai langsmith
+  930  python check-openai.py 
+  931  env | grep OPEN
+  932  python check-openai.py 
+  933  pwd
+  934  python check-openai.py 
+  935  pwd
+  936  cd ../../POC/
+  937  ls -ltr
+  938  cd memc_redis/
+  939  ls -ltr
+  940  vim SMT_sweep_study.sh 
+  941  pwd
+  942  cd /rocknvme/pytorch/pytorch/
+  943  find -type f -name "FlashAttenstion" -print
+  944  grep -rl "scaled_dot_product_attention" *
+  945  grep -rl "scaled_dot_product_attention" * | grep attention
+  946  history
+  947  pwd
+  948  find -type f -name "run_multi*" -print
+  949  cd ..
+  950  ls
+  951  pwd
+  952  cd ..
+  953  git clone https://github.com/intel-innersource/frameworks.ai.models.intel-models.git
+  954  ls -lr
+  955  cd frameworks.ai.models.intel-models/
+  956  ls -ltr
+  957  pwd
+  958  find -type f -name "run_multi*" -print
+  959  cd models_v2/
+  960  cd pytorch/
+  961  ls
+  962  cd llama/
+  963  cd inference/
+  964  cd cpu/
+  965  ls
+  966  vim run_model.sh 
+  967  pwd
+  968  cd /rocknvme/frameworks.ai.models.intel-models
+  969  du . -m
+  970  cd ..
+  971  git clone https://github.com/intel/ai-reference-models.git
+  972  cd ai-reference-models/
+  973  find -type f -name "run_model*" -print
+  974  find -type f -name "run_model*" -print | grep llama
+  975  vim ./models_v2/pytorch/llama/inference/cpu/run_model.sh 
+  976  cd ../frameworks.ai.models.intel-models/
+  977  find -type f -name "run_model*" -print | grep llama
+  978  diff ./models_v2/pytorch/llama/inference/cpu/run_model.sh ../ai-reference-models/models_v2/pytorch/llama/inference/cpu/run_model.sh
+  979  pwd
+  980  cd ../ai-reference-models/
+  981  git remote -v
+  982  vim models_v2/pytorch/llama/inference/cpu/run_model.sh 
+  983  cd models_v2/pytorch/llama/inference/cpu/
+  984  ls -ltr
+  985  vim setup.sh 
+  986  vim README.md 
+  987  vim setup.sh 
+  988  pwd
+  989  cd ../../../..
+  990  find -type f -name "enable_ipex_for_transformers.diff" -print
+  991  pwd
+  992  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/
+  993  ls -ltr
+  994  source ./tools/env_activate.sh inference
+  995  conda env list
+  996  conda activate llm
+  997  exit
+  998  conda activate llm
+  999  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/
+ 1000  source ./tools/env_activate.sh inference
+ 1001  ls -ltt
+ 1002  cd ds_allreduce_bench/
+ 1003  cim cmdlines 
+ 1004  vim cmdlines 
+ 1005  ip r
+ 1006  cat cmdlines 
+ 1007   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1008  ip r
+ 1009  ssh-keygen -t rsa
+ 1010  ssh-copy-id -i ~/.ssh/id_rsa.pub root@10.242.51.166
+ 1011  ssh 'root@10.242.51.166'
+ 1012  ip r
+ 1013   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1014  ip r
+ 1015  vim hostfile
+ 1016   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1017  ssh root@10.242.51.166
+ 1018  systemctl stop firewalld
+ 1019  systemctl status nftables
+ 1020  sestatus
+ 1021  which hydra_bstrap_proxy
+ 1022  vim ccl_func.sh 
+ 1023  source ccl_func.sh 
+ 1024  vim ccl_func.sh 
+ 1025  ccl_config 4
+ 1026   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1027  ping 10.242.51.166
+ 1028  ssh 10.242.51.166
+ 1029  chmod +x /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin/hydra_bstrap_proxy
+ 1030   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1031  history | grep intel_ipx_processScalewithdeepspeed.sh
+ 1032  vim ccl_func.sh 
+ 1033  unset_ccl_config
+ 1034   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1035  vim hostfile
+ 1036   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1037  vi ~/.ssh/known_hosts
+ 1038   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1039  ssh 10.242.51.116
+ 1040  vim cmdlines 
+ 1041   deepspeed  --launcher impi --master_addr  10.242.51.116 --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1042   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1043  vim hostfile
+ 1044   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1045   deepspeed --num_nodes 2  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1046   deepspeed --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1047  history | grep mpirun
+ 1048  ls /tmp/mpi_workdir
+ 1049   mpirun -np 2 -ppn 1 --verbose --hostfile ./hostfile  /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/hellompi
+ 1050  cd ..
+ 1051   mpirun -np 2 -ppn 1 --verbose --hostfile ./hostfile  /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/hellompi
+ 1052  mpirun -np 6 -ppn 2 --verbose --wdir /tmp/mpi_workdir -hosts 10.242.51.166,10.242.51.90,10.242.51.166     bash -c 'echo "Running on $(hostname)"'
+ 1053  clear
+ 1054  mpirun -np 6 -ppn 2 --verbose  -hosts 10.242.51.166,10.242.51.90,10.242.51.166     bash -c 'echo "Running on $(hostname)"'
+ 1055  hostname
+ 1056  ip r
+ 1057  mpirun -np 6 -ppn 2 --verbose  -hosts 10.242.51.166,10.242.51.90,10.242.51.166     bash -c 'echo "Running on $(hostname)"'
+ 1058  cd ds_allreduce_bench/
+ 1059  history
+ 1060   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1061   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1062  vim hostfile
+ 1063   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1064  vim hostfile
+ 1065   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1066  history
+ 1067  mpirun -np 6 -ppn 2 --verbose  -hosts 10.242.51.166,10.242.51.90,10.242.51.166     bash -c 'echo "Running on $(hostname)"'
+ 1068  mpirun -np 6 -ppn 2 --verbose  -hosts 10.242.51.166,10.242.51.90,116.242.51.166     bash -c 'echo "Running on $(hostname)"'
+ 1069  vim /etc/hosts 
+ 1070  ip r
+ 1071  vim /etc/hosts 
+ 1072   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1073  vim hostfile
+ 1074   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1075  vim hostfile
+ 1076   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1077   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --verbose
+ 1078  ssh -o PasswordAuthentication=no 10.242.51.116 hostname
+ 1079  ssh -o PasswordAuthentication=no loalhost hostname
+ 1080  ssh -o PasswordAuthentication=no localhost hostname
+ 1081  deepspeed -h
+ 1082  hostname -I
+ 1083   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 --master_address 10.242.51.116 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --verbose
+ 1084   deepspeed  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63 --master_addr 10.242.51.116 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --verbose
+ 1085   deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --verbose
+ 1086   deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1087  ip r
+ 1088  I_MPI_DEBUG=6  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1089  clear
+ 1090  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1091  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 >& LOG
+ 1092  vim LOG 
+ 1093  pwd 
+ 1094  cd ..
+ 1095  ls -ltr
+ 1096  history | grep deepspeed | grep run.py
+ 1097  git lfs track "Ripan @ Intel Corporation.onepkg"
+ 1098* deepspeed --num_gpus 2 --master_addr 10.242.51.90  --bind_cores_to_rank  --bind_core_list 0-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1099  vim hostfile 
+ 1100  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1101  vim hostfile 
+ 1102  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1103  vim /etc/hosts 
+ 1104  vim hostfile 
+ 1105  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1106  cd ds_allreduce_bench/
+ 1107  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1108  vim hostfile 
+ 1109  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1110  cd ..
+ 1111  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024  --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1112  cp ds_allreduce_bench/ccl_func.sh .
+ 1113  vim ccl_func.sh 
+ 1114  export CCL_ATL_TRANSPORT=mpi
+ 1115  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024  --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1116  export CCL_ALLREDUCE=rabenseifner
+ 1117  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024  --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1118  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile  --bind_core_list 0-31,32-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024  --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1119  deepspeed  --bind_core_list 0-31,32-63  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024  --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1120  deepspeed --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1121  history
+ 1122  unset CCL_ATL_TRANSPORT
+ 1123  deepspeed --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1124  deepspeed -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1125  history
+ 1126  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1127  cd ds_allreduce_bench/
+ 1128  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1129  export CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" export CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1130  CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1131  CCL_WORKER_AFFINITY="64-78" CCL_WORKER_COUNT=8 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1132  CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1133  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1134  CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1135  ip r
+ 1136  vim LOG 
+ 1137  CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1138  history
+ 1139  CCL_ATL_TRANSPORT=mpi CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1140  CCL_ATL_TRANSPORT=ofi CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1141  CCL_ATL_TRANSPORT=mpi CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1142  CCL_ATL_TRANSPORT=mpi CCL_WORKER_AFFINITY="64,65,66,67,68,69,70,71" CCL_WORKER_COUNT=4 I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512
+ 1143  I_MPI_DEBUG=120  deepspeed --num_gpus 4 --master_addr 10.242.51.116  --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512
+ 1144  CCL_WORKER_AFFINITY=auto I_MPI_DEBUG=120  deepspeed --num_gpus 4 --master_addr 10.242.51.116  --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512 
+ 1145  CCL_ATL_TRANSPORT=mpi CCL_WORKER_AFFINITY=auto I_MPI_DEBUG=120  deepspeed --num_gpus 4 --master_addr 10.242.51.116  --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512 
+ 1146  history
+ 1147  I_MPI_DEBUG=120  deepspeed  --no_ssh_check  --launcher impi -H ./hostfile --bind_cores_to_rank --bind_core_list 0-31,32-63  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024
+ 1148  history
+ 1149  history | less
+ 1150  deepspeed --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1151  cd ..
+ 1152  deepspeed --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1153  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1154  hisytory
+ 1155  history
+ 1156  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1157  history
+ 1158  cd ds_allreduce_bench/
+ 1159  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1160  history
+ 1161  cd ..
+ 1162  pip list | grep intel
+ 1163  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1164  vim distributed/run_generation_with_deepspeed.py 
+ 1165  cd ds_allreduce_bench/
+ 1166  vim LOG 
+ 1167  cd ..
+ 1168  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1169  pwd
+ 1170  history
+ 1171  vim ccl_func.sh 
+ 1172  export CCL_ATL_TRANSPORT=mpi deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1173  CCL_ATL_TRANSPORT=mpi deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1174  deepspeed  --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1175  source ccl_func.sh 
+ 1176  vim ccl_func.sh 
+ 1177  unset_ccl_config
+ 1178  deepspeed  --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1179  history
+ 1180  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1181  history
+ 1182  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1183  cd ds_allreduce_bench/
+ 1184  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1185  clear
+ 1186  history
+ 1187  vim ccl_func.sh 
+ 1188  unset_ccl_config
+ 1189  vim hostfile
+ 1190  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1191  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  > & LOG
+ 1192  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  >& LOG
+ 1193  vim hostfile
+ 1194  ssh root@10.242.51.166
+ 1195  pwd
+ 1196  history
+ 1197  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1198  ip r
+ 1199  vim hostfile
+ 1200  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  
+ 1201* 
+ 1202  I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  | tee log1
+ 1203  vim log1 
+ 1204  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  | tee log2
+ 1205  vim log2 
+ 1206  ip r
+ 1207  fi_info
+ 1208  which mpicc
+ 1209  vim log1 
+ 1210  vim log2 
+ 1211  vim LOG 
+ 1212  history
+ 1213  deepspeed  --num_gpus 2 --master_addr 10.242.51.166  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1214  pwd
+ 1215  cd ..
+ 1216  deepspeed  --num_gpus 2 --master_addr 10.242.51.116  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1217  history
+ 1218  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1219  pwd
+ 1220  ip r
+ 1221  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
+ 1222  vim ~/.ssh/authorized_keys 
+ 1223  ssh root@10.242.51.116
+ 1224  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1225  mpirun --version
+ 1226  history | grep mpirun
+ 1227  mpirun -np 2 -ppn 1  --hostfile ./hostfile bash -c 'echo "Running on $(hostname)"'
+ 1228  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts 10.242.51.166,10.242.51.116 IMB-MPI1 SendRecv -npmin 2 
+ 1229  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts 10.242.51.166,10.242.51.116 IMB-MPI1 SendRecv -npmin 4
+ 1230  mpirun -np 6 -ppn 2 --verbose  -hosts 10.242.51.166,10.242.51.116     bash -c 'echo "Running on $(hostname)"'
+ 1231  which IMB-MPI1
+ 1232  which mpiexec
+ 1233  history | grep mpirun
+ 1234  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts 10.242.51.166,10.242.51.116  /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/hellompi
+ 1235  cd ds_allreduce_bench/
+ 1236  ls -ltr
+ 1237  vim  ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1238  history
+ 1239  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024  | tee log2
+ 1240  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex | tee log2
+ 1241  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex  --ccl | tee log2
+ 1242  cd ..
+ 1243  history
+ 1244  ip r
+ 1245  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1246  cd ds_allreduce_bench/
+ 1247  ls -ltr
+ 1248  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1249  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex   | tee log2
+ 1250  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex  >& LOG
+ 1251  vim LOG 
+ 1252  vim ccl_func.sh 
+ 1253  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1254  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1255  cd ..
+ 1256  history
+ 1257  vim ds_allreduce_bench/ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1258  pwd
+ 1259  CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1260  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1261  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1262  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 2>&1 | tee  log-ofi
+ 1263  vim log-ofi 
+ 1264  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 2>&1 | tee  log-ofi
+ 1265  ls -ltr
+ 1266  vim log-ofi 
+ 1267  pwd
+ 1268  vim log-ofi 
+ 1269  history
+ 1270  history | tail -n 20 > multi_node_commands
+ 1271  vim multi_node_commands 
+ 1272  history | tail -n 50 > multi_node_commands
+ 1273  vim multi_node_commands 
+ 1274  mv multi_node_commands multi_node_command_example
+ 1275  vim multi_node_command_example 
+ 1276  history | tail -n 50 >  multi_node_command_example
+ 1277  vim multi_node_command_example 
+ 1278  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1279  cd ds_allreduce_bench/
+ 1280  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1281  vim multi_node_command_example 
+ 1282  cd ..
+ 1283  vim multi_node_command_example 
+ 1284  pwd
+ 1285  vim multi_node_command_example 
+ 1286  history | grep -v hostfile
+ 1287  vim multi_node_command_example 
+ 1288  pwd
+ 1289  ip r
+ 1290  which mpiexec
+ 1291  cd ../oneCCL_release/
+ 1292  ls
+ 1293  cd env/
+ 1294  ls
+ 1295  vim setvars.sh 
+ 1296  cd ..
+ 1297  ls -ltr
+ 1298  cd opt/
+ 1299  ls
+ 1300  cd mpi/
+ 1301  ls -ltr
+ 1302  pwd
+ 1303  cd libfabric/lib/
+ 1304  ls
+ 1305  cd ../
+ 1306  cd ..
+ 1307  echo $I_MPI_ROOT
+ 1308  mpirun --version
+ 1309  pwd
+ 1310  cd ../../env/
+ 1311  ls -ltr
+ 1312  vm vars.sh 
+ 1313  vikm vars.sh 
+ 1314  vim vars.sh 
+ 1315  pwd
+ 1316  cd ../..
+ 1317  cd tools/
+ 1318  vim env_setup.sh 
+ 1319  echo $VER_DS_SYCL
+ 1320  vim env_setup.sh 
+ 1321  python yaml_utils.py -f dependency_version.yml -d deepspeed -k version
+ 1322  vim env_setup.sh 
+ 1323  python ./yaml_utils.py -f dependency_version.yml -d deepspeed -k version
+ 1324  ls -ltr
+ 1325  pip list | grep deepspeed
+ 1326  vim env_setup.sh 
+ 1327  vim env_activate.sh 
+ 1328  ls ${ONECCL_PATH}/env/setvars.sh
+ 1329  vim env_setup.sh 
+ 1330  pip list | grep deepspeed
+ 1331  pwd
+ 1332  cd ../inference/
+ 1333  ls -ltr
+ 1334  pwd
+ 1335  cd ..
+ 1336  pwd
+ 1337  cd oneCCL_release/
+ 1338  ls -lr
+ 1339  cd opp
+ 1340  cd opt/
+ 1341  ls
+ 1342  cd mpi/
+ 1343  ls
+ 1344  pwd
+ 1345  ls -ltr
+ 1346  pwd
+ 1347  cd ..
+ 1348  cd .
+ 1349  cd ..
+ 1350  cd inference/ds_allreduce_bench/
+ 1351  ls -ltr
+ 1352  cd ..
+ 1353  ls -ltr
+ 1354  cd ds_allreduce_bench/
+ 1355  cat ../multi_node_command_example 
+ 1356  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1357  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex >& LOG
+ 1358  vim LOG 
+ 1359  mv LOG LOG-mpi
+ 1360  CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex 2>&1 | tee LOG-ofi
+ 1361  vim LOG-ofi 
+ 1362  CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex >& LOG-ofi
+ 1363  vim LOG-ofi 
+ 1364  FI_LOG_LEVEL=debug CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex >& LOG-ofi
+ 1365  vim LOG-ofi 
+ 1366  I_MPI_OFI_PROVIDER=psm3 CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex >& LOG
+ 1367  vim LOG
+ 1368  FI_PROVIDER=psm3 FI_LOG_LEVEL=debug CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex >& LOG-ofi
+ 1369  vim LOG-ofi 
+ 1370  cat ../multi_node_command_example 
+ 1371  cd ..
+ 1372  history > debug_commands_tried
+ 1373  vim debug_commands_tried 
+ 1374  vim ../tools/env_setup.sh 
+ 1375  vim  debug_commands_tried 
+ 1376  env | grep FI
+ 1377  env | grep PROVIDER
+ 1378  env | grep CCL
+ 1379  env | grep MPI
+ 1380  env | grep psm3
+ 1381  history | grep run.py
+ 1382    FI_PROVIDER=psm3  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/  --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1383  vim hostfile 
+ 1384    FI_PROVIDER=psm3  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/  --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1385    FI_PROVIDER=psm3  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/  --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1386    FI_PROVIDER=psm3  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi    run.py --benchmark -m ./saved_results/llama_8b_shard/  --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1387  vim distributed/run_generation_with_deepspeed.py 
+ 1388  git remote -v
+ 1389  vim distributed/run_generation_with_deepspeed.py 
+ 1390  from deepspeed.accelerator import get_accelerator
+ 1391  python -c "from deepspeed.accelerator import get_accelerator; print(get_accelerator().communication_backend_name())"
+ 1392  vim distributed/run_generation_with_deepspeed.py 
+ 1393  git remeote -v
+ 1394* 
+ 1395  history
+ 1396  ls ./saved_results/llama_8b_shard/
+ 1397  vim ./saved_results/llama_8b_shard/config.json 
+ 1398  vim ./saved_results/llama_8b_shard/generation_config.json 
+ 1399  pwd
+ 1400  cd /home/rdas/LLM/intel-extension-for-pytorch/
+ 1401  ls -ltr
+ 1402  cd third_party/
+ 1403  ls -ltr
+ 1404  cd ideep/
+ 1405  ls -ltr
+ 1406  cd ..
+ 1407  ls -ltr
+ 1408  cd oneCCL/
+ 1409  pwd
+ 1410  cd ../../
+ 1411  history
+ 1412  pwd
+ 1413  cd examples/cpu/llm/inference/ds_allreduce_bench/
+ 1414  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1415  ls -ltr
+ 1416  cat cmdlines 
+ 1417  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex  --ccl | tee log2
+ 1418  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex  --ccl | tee log2
+ 1419  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex  | tee log2
+ 1420  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024   | tee log2
+ 1421  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1422  I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1423  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1424  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1425  vim LOG
+ 1426  pwd
+ 1427  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1428  cp ds_comm_bench_compare_matmul_vs_allreduce.py ds_comm_bench_compare_matmul_vs_allreduce.py.backup
+ 1429  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1430  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1431  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1432  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1433  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1434  vim LOG
+ 1435  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1436  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1437  vim LOG
+ 1438  env | grep info
+ 1439  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1440  vim LOG
+ 1441  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1442  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1443  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1444  vim LOG
+ 1445  vim ds_comm_bench_compare_matmul_vs_allreduce.py 
+ 1446  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024
+ 1447  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1448  vim LOG
+ 1449  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 --verbose ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 >& LOG
+ 1450  deepspeed --help
+ 1451  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1452  python -c "import intel_extension_for_pytorch as ipex; print([attr for attr in dir(ipex) "
+ 1453  python -c "import intel_extension_for_pytorch as ipex; print([attr for attr in dir(ipex)]) "
+ 1454  python -c "import intel_extension_for_pytorch as ipex; print([attr for attr in dir(ipex.distributed)]) "
+ 1455  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1456  history | grep scp
+ 1457  cat hostfile
+ 1458  pwd
+ 1459  scp ds_comm_bench_compare_matmul_vs_allreduce.py root@10.242.51.166:/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench/
+ 1460  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1461  pwd
+ 1462  cd ..
+ 1463  ls -ltr
+ 1464  cat debug_commands_tried 
+ 1465  ls -ltr
+ 1466  vim multi_node_command_example 
+ 1467  cat multi_node_command_example 
+ 1468  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1469  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp >& LOG
+ 1470  vim LOG 
+ 1471  history
+ 1472  I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1473  history
+ 1474  history | less
+ 1475  FI_PROVIDER=psm3  CCL_LOG_LEVEL=debug  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1476  FI_PROVIDER=psm3   CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1477  FI_PROVIDER=psm3   CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp >& LOG
+ 1478  vim LOG 
+ 1479  mv LOG LOG-no-ipex
+ 1480  FI_PROVIDER=psm3   CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --ipex --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp >& LOG-ipex
+ 1481  vim LOG-ipex 
+ 1482  vim LOG-no-ipex 
+ 1483  FI_PROVIDER=psm3   CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1484  FI_PROVIDER=psm3   CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=120 deepspeed   -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16   --greedy --input-tokens 1024 --num-iter 1  --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1485  deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1486  cd ds_allreduce_bench/
+ 1487  CCL_ATL_TRANSPORT=mpi deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1488  CCL_ATL_TRANSPORT=ofi deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2  --elements 67108864 --computeSz 1024 --ipex
+ 1489  cd ..
+ 1490  cat hostfile 
+ 1491  ssh 10.242.51.166
+ 1492  vim multi_node_command_example 
+ 1493  ssh node2
+ 1494  vim hostfile 
+ 1495  cat hostfile
+ 1496  ssh 10.242.51.116 
+ 1497  ssh 10.242.51.166 
+ 1498  vim ~/.ssh/config 
+ 1499  ssh node1
+ 1500  vim ~/.ssh/config 
+ 1501  ssh 10.242.51.90
+ 1502  cat hostfile
+ 1503  ssh 10.242.51.116 
+ 1504  pwd
+ 1505  vim hostfile 
+ 1506  pwd
+ 1507  deepspeed -h
+ 1508  git remote -v
+ 1509  ls -ltar
+ 1510  cat multi_node_command_example 
+ 1511  cd ds_allreduce_bench/
+ 1512  ls -ltar
+ 1513  cd  ../..
+ 1514  ls -ltar
+ 1515  vim tools/env_setup.sh 
+ 1516  vim tools/env_activate.sh 
+ 1517  ls -ltar
+ 1518  cd oneCCL_release/
+ 1519  ls -ltar
+ 1520  cd env/
+ 1521  ls -ltar
+ 1522  vim setvars.sh 
+ 1523* 
+ 1524  ls -ltar
+ 1525  cd ..
+ 1526  ls
+ 1527  ls -ltar
+ 1528  cd tools/
+ 1529  ls -ltar
+ 1530  cd ..
+ 1531  ls
+ 1532  cd inference/
+ 1533  ls -ltar
+ 1534  cat multi_node_command_example 
+ 1535  which mpicc
+ 1536  mpirun --version
+ 1537  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/hellompi 
+ 1538  cat multi_node_command_example 
+ 1539  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench/ 
+ 1540  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed -hosts node1,node2 --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1541  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1542  cat multi_node_command_example 
+ 1543  cat ../multi_node_command_example 
+ 1544  cd ..
+ 1545  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp
+ 1546  ls -ltar
+ 1547  deepspeed --help
+ 1548  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 2&>1 | tee res_openmpi
+ 1549  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 
+ 1550  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1551  which mpirun 
+ 1552  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 
+ 1553  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp --allow-run-as-root 
+ 1554  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 
+ 1555  ls -ltar
+ 1556  pwd
+ 1557  find ./* -iname runner.py
+ 1558  cd ..
+ 1559  ls
+ 1560  find ./* -iname runner.py
+ 1561  pwd
+ 1562  python -c "import deepspeed;print(deepspeed.__file__)"
+ 1563  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp --allow-run-as-root 
+ 1564  pwd
+ 1565  cd inference/
+ 1566  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 
+ 1567  source ../oneCCL_release/env/setvars.sh 
+ 1568  which mpicc
+ 1569  mpirun --version
+ 1570  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp 
+ 1571  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res
+ 1572  vim res
+ 1573  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res
+ 1574  vim res
+ 1575  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res
+ 1576  vim res
+ 1577  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res2
+ 1578  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1579  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res2
+ 1580  pip install mpi4py
+ 1581  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher openmpi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res2
+ 1582  python -c "import torch;print(torch.__file__)"
+ 1583  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res
+ 1584  source ../oneCCL_release/env/setvars.sh 
+ 1585  mpirun --version
+ 1586  I_MPI_DEBUG=5 deepspeed  -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127  run.py --benchmark -m ./saved_results/llama_8b_shard/ --dtype bfloat16 --ipex  --greedy --input-tokens 1024 --num-iter 5 --num-warmup 2 --batch-size 1 --max-new-tokens 56 --token-latency  --autotp |& tee res
+ 1587  vim res
+ 1588  pwd
+ 1589  cd ~
+ 1590  ls -ltar
+ 1591  cd nkbhat_debug/
+ 1592  ldd hello
+ 1593  which mpicc
+ 1594  mpirun --version
+ 1595  mpicc -o hello hello.c
+ 1596  ldd hello
+ 1597  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1598  ssh node2
+ 1599  ssh node1
+ 1600  ls -ltar
+ 1601  ldd hello
+ 1602  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1603  ssh node1
+ 1604  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 ./hello
+ 1605  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1 ./hello
+ 1606  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1607  ldd hello
+ 1608  pwd
+ 1609  ls -ltar
+ 1610  which mpirun
+ 1611* 
+ 1612  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1613  ls -ltar
+ 1614  rm -rf ./hello
+ 1615  mv hello.c ../
+ 1616  ls -ltar
+ 1617  mv ../hello.c ./
+ 1618  ls -ltar
+ 1619  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1620  mpicc -o hello hello.c
+ 1621  ldd hello
+ 1622  mpirun -n 4 -N 2 -host node1:2,node2:2 ./hello
+ 1623  mpirun -n 4 -N 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1624  source /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/env/setvars.sh  
+ 1625  ls -ltar
+ 1626  mpicc -o hello hello.c
+ 1627  mpirun -n 4 -N 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1628  I_MPI_DEBUG=5 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1629  I_MPI_DEBUG=2 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1630  I_MPI_DEBUG=1 mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1631  I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -ppn 2 -hosts node1,node2 ./hello
+ 1632  I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -hosts node1,node2 ./hello
+ 1633  I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -host node1:2,node2:2 ./hello
+ 1634  I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1635  I_MPI_PMI=pmi I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1636  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1637  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 --allow-run-as-root ./hello
+ 1638  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 4 -n 2 -host node1:2 --allow-run-as-root ./hello
+ 1639  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 2  -host node1:2 --allow-run-as-root ./hello
+ 1640  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 2  -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1641  I_MPI_PMI=pmi I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 2 -n 2 -host node1:2,node2:2 --allow-run-as-root ./hello
+ 1642  I_MPI_PMI=pmi I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 2 -n 2 -host node1:2 --allow-run-as-root ./hello
+ 1643  I_MPI_PMI=pmi I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -N 2 -n 2 --allow-run-as-root ./hello
+ 1644  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 2 --allow-run-as-root ./hello
+ 1645  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 4 --allow-run-as-root ./hello
+ 1646  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 4 -host node1:4 --allow-run-as-root ./hello
+ 1647  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -N 4 -host node1:4 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1648  vim res_hello_impi_ompi_launcher 
+ 1649  I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4  --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1650  vim hosts
+ 1651  readlink -f hosts 
+ 1652  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4  --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1653  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -host node1:4 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1654  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -host node1 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1655  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher
+ 1656  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher 
+ 1657  vim res_hello_impi_ompi_launcher 
+ 1658  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher 
+ 1659  which mpirun
+ 1660  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello |& tee res_hello_impi_ompi_launcher 
+ 1661  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1662   export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1663  ldd hello
+ 1664   export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1665  mpicc -o hello hello.c
+ 1666   export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1667  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1668   export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1669  export PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/bin:$PATH && export LD_LIBRARY_PATH=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/:$LD_LIBRARY_PATH
+ 1670  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1671  ls -ltar
+ 1672  which mpicc
+ 1673  rm -rf ./hello
+ 1674  mpicc -o hello hello.c
+ 1675  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1676  ls -ltar
+ 1677  mkdir impi/
+ 1678  cd impi
+ 1679  mkdir debug
+ 1680  mkdir src
+ 1681  mv ../libmpi.* ./debug/
+ 1682  ls -ltar
+ 1683  cd src/
+ 1684  ls -ltar
+ 1685  pwd
+ 1686  ls -ltar
+ 1687  pw
+ 1688  pwd
+ 1689  ls -ltzr
+ 1690  ls -ltar
+ 1691  pwd
+ 1692  cd ..
+ 1693  ls -ltar
+ 1694  cd ..
+ 1695  ls -ltar
+ 1696  cd impi
+ 1697  ls -ltar
+ 1698  cd ..
+ 1699  ls -ltar
+ 1700  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1701  LD_PRELOAD=/root/nkbhat_debug/impi/debug/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --host node1:4 --allow-run-as-root ./hello 
+ 1702  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root ./hello 
+ 1703  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript ./hello 
+ 1704  vim .gdbinit
+ 1705  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript --args ./hello 
+ 1706  mv .gdbinit ~/
+ 1707  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript --args ./hello 
+ 1708  dnf debuginfo-install glibc-2.34-89.bkc.el9.x86_64
+ 1709  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript --args ./hello 
+ 1710  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript --args ./hello 
+ 1711  ls -ltar
+ 1712  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 ./hello
+ 1713  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root ./hello 
+ 1714  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript ./hello 
+ 1715  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root ./hello 
+ 1716  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root gdb -x /root/nkbhat_debug/testscript ./hello 
+ 1717  /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root ./hello 
+ 1718  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=5 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 --host node1:1 --allow-run-as-root ./hello 
+ 1719  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 --allow-run-as-root ./hello 
+ 1720  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host node1:1 --allow-run-as-root ./hello 
+ 1721  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host node1:1 --allow-run-as-root ./hello 
+ 1722  ldd hello
+ 1723  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host node1:1 --allow-run-as-root ./hello 
+ 1724  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host JF5300-B11A346T:1 --allow-run-as-root ./hello 
+ 1725  which deepspeed
+ 1726  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1727  which mpirun
+ 1728  source ../oneCCL_release/env/setvars.sh 
+ 1729  source /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/env/setvars.sh  
+ 1730  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1731  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/
+ 1732  ls -ltar
+ 1733  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1734  ls -ltar
+ 1735  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1736  cd ..
+ 1737  ls -ltar
+ 1738  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1739  find ./* -iname run.py
+ 1740  cd inference/
+ 1741  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1742  ssh 10.45.156.100 
+ 1743  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp
+ 1744  pwd
+ 1745  cd /home/rdas/LLM/
+ 1746  ls -ltar
+ 1747  grep -ir "VER_TORCH" ./*
+ 1748  cd ~
+ 1749  ls -ltar
+ 1750  cd nkbhat_debug/
+ 1751  ls -ltar
+ 1752  LD_PRELOAD=/root/nkbhat_debug/impi/debug/master/libmpi.so.12.0.0 I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host JF5300-B11A346T:1 --allow-run-as-root ./hello 
+ 1753  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 1 -host JF5300-B11A346T:1 --allow-run-as-root ./hello 
+ 1754  I_MPI_HYDRA_HOST_FILE=/root/nkbhat_debug/hosts I_MPI_PMI_LIBRARY=/root/nkbhat_debug/openmpi-5.0.5/build/install/lib/libpmix.so.2.13.3 I_MPI_PMI=pmix I_MPI_DEBUG=1 /root/nkbhat_debug/openmpi-5.0.5/build/install/bin/mpirun -n 4 -host JF5300-B11A346T:4 --allow-run-as-root ./hello 
+ 1755  ls -ltar
+ 1756  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1757  cd /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/
+ 1758  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1759  pwd
+ 1760  cd saved_results/
+ 1761  pwd
+ 1762  cd ..
+ 1763  pwd
+ 1764  history
+ 1765  ls -ltr
+ 1766  vim multi_node_command_example 
+ 1767  history | grep ds_comm_bench_compare_matmul_vs_allreduce.py
+ 1768  cd ds_allreduce_bench/
+ 1769  scp ds_comm_bench_compare_matmul_vs_allreduce.py root@10.45.156.100:/home/rdas/v2p4pluscpuprebuilt/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench/
+ 1770  history | grep ds_comm_bench_compare_matmul_vs_allreduce.py | grep -v host
+ 1771  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed -hosts node1,node2 --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1772  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed --hosts node1,node2 --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1773  CCL_ATL_TRANSPORT=mpi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1774  CCL_ATL_TRANSPORT=ofi I_MPI_MULTIRAIL=1 I_MPI_DEBUG=120 deepspeed -H ./hostfile --launcher impi  --bind_cores_to_rank  --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+ 1775  history
+ 1776  ip r
+ 1777  history | grep s_comm_bench_compare_matmul_vs_allreduce. | grep master
+ 1778  I_MPI_DEBUG=120  deepspeed --num_gpus 4 --master_addr 10.242.51.116  --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512
+ 1779  I_MPI_DEBUG=120 CCL_ATL_TRANSPORT=mpi  deepspeed --num_gpus 4 --master_addr 10.242.51.116  --bind_cores_to_rank --bind_core_list 0-31,32-63,64-95,96-127  ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 16777216 --computeSz 512
+ 1780  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed --force_multi --launcher impi --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512
+ 1781  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed  --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512
+ 1782  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed --force_multi --launcher impi --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512
+ 1783  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed  --launcher impi --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512
+ 1784  cd ..
+ 1785  hitsory
+ 1786  history
+ 1787  ls -ltr
+ 1788  vim LOG-ipex 
+ 1789  ls -ltar
+ 1790  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed  --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512 
+ 1791  ls -ltar
+ 1792  find ./* -iname ds_comm_bench_compare_*
+ 1793  cd ds_allreduce_bench/
+ 1794  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed  --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512 
+ 1795  ls -ltar
+ 1796  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug  deepspeed  --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512 
+ 1797  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug  deepspeed  --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512 
+ 1798  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed --force_multi --launcher impi --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512
+ 1799  I_MPI_DEBUG=5 CCL_LOG_LEVEL=debug CCL_ATL_TRANSPORT=mpi  deepspeed --force_multi --launcher impi --master_addr 10.242.51.116 --bind_cores_to_rank --bind_core_list 0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --ipex --elements 16777216 --computeSz 512 |& tee res
+ 1800  vim res
+ 1801  ls -ltar
+ 1802  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1803  cd ..
+ 1804  find ./* -iname run.py
+ 1805  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1806  ls -ltar
+ 1807  cd saved_results/
+ 1808  ls -ltar
+ 1809  cd llama_8b_shard/
+ 1810  ls -ltar
+ 1811  cd ..
+ 1812  ls
+ 1813  cd ..
+ 1814  ls
+ 1815  deepspeed --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama3_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1816  deepspeed --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1817  ls -ltr
+ 1818  vim res
+ 1819  deepspeed --force-multi--launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1820  deepspeed --force-multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1821  deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1822  vim res
+ 1823  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1824  CCL_ATL_TRANSPORT=ofi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1825  vim res
+ 1826  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res 
+ 1827  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --master_addr 10.45.156.100 --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res_ompi_launch
+ 1828  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --hostfile ./hostfile --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res_ompi_launch
+ 1829  vim res
+ 1830  ls -ltar
+ 1831  vim res_ompi_launch 
+ 1832  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --hostfile ./hostfile --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res_case2
+ 1833  vim hostfile 
+ 1834  vim hostfile_hostnames
+ 1835  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --hostfile ./hostfile_hostnames --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res_case2
+ 1836  vim hostfile_hostnames
+ 1837  CCL_ATL_TRANSPORT=mpi I_MPI_DEBUG=5 deepspeed --force_multi --launcher impi --hostfile ./hostfile_hostnames --bind_cores_to_rank --bind_core_list 0-42,43-85,171-213,214-255 run.py --benchmark -m ./saved_results/llama_8b_shard --dtype bfloat16 --ipex --greedy --input-tokens 1024 --num-iter 2 --num-warmup 1 --batch-size 1 --max-new-tokens 32 --token-latency --autotp |& tee res_case2
+ 1838  history > all-cmds-ds_micro

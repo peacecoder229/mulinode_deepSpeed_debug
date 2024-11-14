@@ -1,0 +1,453 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-10-31 10:47:49,993] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-10-31 10:47:51,821] [INFO] [runner.py:463:main] Using IP address of 10.242.51.166 for node 10.242.51.166
+['mpirun', '-ppn', '2', '-genv', 'PYTHONPATH', '/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench', '-genv', 'OMP_NUM_THREADS', '64', '-genv', 'MASTER_ADDR', '10.242.51.166', '-genv', 'MASTER_PORT', '29500', '-genv', 'WORLD_SIZE', '4', '-genv', 'LOCAL_SIZE', '2', '-genv', 'I_MPI_PIN', '0', '-hosts', '10.242.51.166,10.242.51.116', '-n', '1', '-env', 'RANK', '0', '-env', 'LOCAL_RANK', '0', 'numactl', '-C', '0-63', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex', ':', '-n', '1', '-env', 'RANK', '1', '-env', 'LOCAL_RANK', '1', 'numactl', '-C', '64-127', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex', ':', '-n', '1', '-env', 'RANK', '2', '-env', 'LOCAL_RANK', '0', 'numactl', '-C', '0-63', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex', ':', '-n', '1', '-env', 'RANK', '3', '-env', 'LOCAL_RANK', '1', 'numactl', '-C', '64-127', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex']
+[2024-10-31 10:47:51,901] [INFO] [runner.py:568:main] cmd = mpirun -ppn 2 -genv PYTHONPATH /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/inference/ds_allreduce_bench -genv OMP_NUM_THREADS 64 -genv MASTER_ADDR 10.242.51.166 -genv MASTER_PORT 29500 -genv WORLD_SIZE 4 -genv LOCAL_SIZE 2 -genv I_MPI_PIN 0 -hosts 10.242.51.166,10.242.51.116 -n 1 -env RANK 0 -env LOCAL_RANK 0 numactl -C 0-63 /root/miniforge3/envs/llm/bin/python -u ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex : -n 1 -env RANK 1 -env LOCAL_RANK 1 numactl -C 64-127 /root/miniforge3/envs/llm/bin/python -u ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex : -n 1 -env RANK 2 -env LOCAL_RANK 0 numactl -C 0-63 /root/miniforge3/envs/llm/bin/python -u ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex : -n 1 -env RANK 3 -env LOCAL_RANK 1 numactl -C 64-127 /root/miniforge3/envs/llm/bin/python -u ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+[mpiexec@JF5300-B11A346T] Launch arguments: /usr/bin/ssh -x 10.242.51.166 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_bstrap_proxy --upstream-host JF5300-B11A346T --upstream-port 33449 --pgid 0 --launcher ssh --launcher-number 0 --base-path /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 2 --debug --proxy-id 0 --node-id 0 --subtree-size 1 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+[mpiexec@JF5300-B11A346T] Launch arguments: /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_bstrap_proxy --upstream-host JF5300-B11A346T --upstream-port 33449 --pgid 0 --launcher ssh --launcher-number 0 --base-path /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin/ --tree-width 16 --tree-level 1 --time-left -1 --launch-type 2 --debug --proxy-id 1 --node-id 1 --subtree-size 1 --upstream-fd 11 /home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/bin//hydra_pmi_proxy --usize -1 --auto-cleanup 1 --abort-signal 9 
+IPL WARN> ipl_create_domains: Not enough cpus for the specified I_MPI_PIN_ORDER, switch to I_MPI_PIN_ORDER=compact
+My guessed rank = 0
+My guessed rank = 1
+My guessed rank = 2
+My guessed rank = 3
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-10-31 10:47:54,670] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-10-31 10:47:54,681] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-10-31 10:47:54,752] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-10-31 10:47:54,762] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-10-31 10:47:55,828] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-10-31 10:47:55,828] [INFO] [comm.py:637:init_distributed] cdb=None
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[2024-10-31 10:47:55,847] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-10-31 10:47:55,847] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-10-31 10:47:55,847] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend ccl
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.054442644119262695 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.1008005142211914 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+[2024-10-31 10:47:56,032] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-10-31 10:47:56,032] [INFO] [comm.py:637:init_distributed] cdb=None
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+[2024-10-31 10:47:56,035] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-10-31 10:47:56,035] [INFO] [comm.py:637:init_distributed] cdb=None
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.06191420555114746 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.10074687004089355 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156297:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156297:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156297:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156296:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156296:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156297:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156297:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156297:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156297:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:156297:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156296:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156296:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156296:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:156296:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156297:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156297:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:156297:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156296:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054974032
+libfabric:156296:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:156296:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:156296:1730396877::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:156296:1730396877::core:core:ofi_register_provider():503<info> "tcp" filtered by provider include/exclude list, skipping
+libfabric:156297:1730396877::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:156297:1730396877::core:core:ofi_register_provider():503<info> "tcp" filtered by provider include/exclude list, skipping
+libfabric:156296:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156296:1730396877::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:156296:1730396877::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:156297:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156297:1730396877::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:156297:1730396877::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:156296:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156296:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156296:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156296:1730396877::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+libfabric:156297:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:156297:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:156297:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:156297:1730396877::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186328:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186328:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186328:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186329:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186329:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186328:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186328:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186328:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186328:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:186328:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186328:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186328:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:186328:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:186328:1730396877::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:186328:1730396877::core:core:ofi_register_provider():503<info> "tcp" filtered by provider include/exclude list, skipping
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186329:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186329:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186329:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:186329:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:186328:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186328:1730396877::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:186328:1730396877::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186329:1730396877::core:mr:ofi_default_cache_size():79<info> default cache size=1054972880
+libfabric:186329:1730396877::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:186329:1730396877::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:186329:1730396877::core:core:ofi_register_provider():503<info> "tcp" filtered by provider include/exclude list, skipping
+libfabric:186328:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186328:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186328:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186328:1730396877::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+libfabric:186329:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186329:1730396877::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:186329:1730396877::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:186329:1730396877::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:186329:1730396877::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:186329:1730396877::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:186329:1730396877::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+libfabric:156296:1730396878::psm3:core:fi_prov_ini():921<info> JF5300-B11A319T:rank0: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_bool():98<info> JF5300-B11A319T:rank0: read bool var FI_PSM3_NAME_SERVER=0
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank0: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_str():128<info> JF5300-B11A319T:rank0: read string var FI_PSM3_UUID=d3d70200-7024-e76a-c925-0600db650e44
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank0: read int var FI_PSM3_DELAY=0
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank0: read int var FI_PSM3_TIMEOUT=0
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank0: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A319T:rank0: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank0: variable FI_PSM3_INJECT_SIZE=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank0: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank0: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank0: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank0: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A319T:rank0: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank0: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:156296:1730396878::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:156296:1730396878::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:156296:1730396878::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:156296:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:156296:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A319T:rank0: 
+libfabric:156296:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A319T:rank0: TAG60 instance included
+libfabric:156296:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A319T:rank0: TAG64 instance included
+libfabric:156297:1730396878::psm3:core:fi_prov_ini():921<info> JF5300-B11A319T:rank1: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_bool():98<info> JF5300-B11A319T:rank1: read bool var FI_PSM3_NAME_SERVER=0
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank1: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_str():128<info> JF5300-B11A319T:rank1: read string var FI_PSM3_UUID=d3d70200-7024-e76a-c925-0600db650e44
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank1: read int var FI_PSM3_DELAY=0
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank1: read int var FI_PSM3_TIMEOUT=0
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank1: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A319T:rank1: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank1: variable FI_PSM3_INJECT_SIZE=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank1: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank1: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A319T:rank1: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank1: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A319T:rank1: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A319T:rank1: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:156297:1730396878::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:156297:1730396878::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:156297:1730396878::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:156297:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:156297:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A319T:rank1: 
+libfabric:156297:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A319T:rank1: TAG60 instance included
+libfabric:156297:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A319T:rank1: TAG64 instance included
+libfabric:156296:1730396878::psm3:core:psmx3_init_lib():375<info> JF5300-B11A319T:rank0: PSM3 header version = (3, 0)
+libfabric:156296:1730396878::psm3:core:psmx3_init_lib():377<info> JF5300-B11A319T:rank0: PSM3 library version = (3, 0)
+libfabric:156296:1730396878::psm3:core:psmx3_init_lib():380<info> JF5300-B11A319T:rank0: PSM3 multi-ep feature enabled.
+libfabric:186328:1730396878::psm3:core:fi_prov_ini():921<info> JF5300-B11A346T:rank2: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_bool():98<info> JF5300-B11A346T:rank2: read bool var FI_PSM3_NAME_SERVER=0
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank2: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_str():128<info> JF5300-B11A346T:rank2: read string var FI_PSM3_UUID=d3d70200-7024-e76a-c925-0600db650e44
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank2: read int var FI_PSM3_DELAY=0
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank2: read int var FI_PSM3_TIMEOUT=0
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank2: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank2: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank2: variable FI_PSM3_INJECT_SIZE=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank2: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank2: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank2: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank2: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank2: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank2: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:186328:1730396878::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:186328:1730396878::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:186328:1730396878::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:186328:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:186328:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A346T:rank2: 
+libfabric:186328:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A346T:rank2: TAG60 instance included
+libfabric:186328:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A346T:rank2: TAG64 instance included
+libfabric:186329:1730396878::psm3:core:fi_prov_ini():921<info> JF5300-B11A346T:rank3: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_bool():98<info> JF5300-B11A346T:rank3: read bool var FI_PSM3_NAME_SERVER=0
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank3: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_str():128<info> JF5300-B11A346T:rank3: read string var FI_PSM3_UUID=d3d70200-7024-e76a-c925-0600db650e44
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank3: read int var FI_PSM3_DELAY=0
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank3: read int var FI_PSM3_TIMEOUT=0
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank3: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank3: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank3: variable FI_PSM3_INJECT_SIZE=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank3: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank3: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank3: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank3: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank3: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank3: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:186329:1730396878::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:186329:1730396878::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:186329:1730396878::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:186329:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:186329:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A346T:rank3: 
+libfabric:186329:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A346T:rank3: TAG60 instance included
+libfabric:186329:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A346T:rank3: TAG64 instance included
+libfabric:156297:1730396878::psm3:core:psmx3_init_lib():375<info> JF5300-B11A319T:rank1: PSM3 header version = (3, 0)
+libfabric:156297:1730396878::psm3:core:psmx3_init_lib():377<info> JF5300-B11A319T:rank1: PSM3 library version = (3, 0)
+libfabric:156297:1730396878::psm3:core:psmx3_init_lib():380<info> JF5300-B11A319T:rank1: PSM3 multi-ep feature enabled.
+libfabric:156296:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank0: NIC unit_id 0 STATE = INACTIVE
+libfabric:156297:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank1: NIC unit_id 0 STATE = INACTIVE
+libfabric:186328:1730396878::psm3:core:psmx3_init_lib():375<info> JF5300-B11A346T:rank2: PSM3 header version = (3, 0)
+libfabric:186328:1730396878::psm3:core:psmx3_init_lib():377<info> JF5300-B11A346T:rank2: PSM3 library version = (3, 0)
+libfabric:186328:1730396878::psm3:core:psmx3_init_lib():380<info> JF5300-B11A346T:rank2: PSM3 multi-ep feature enabled.
+libfabric:186328:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank2: NIC unit_id 0 STATE = INACTIVE
+libfabric:156296:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank0: NIC unit_id 2 STATE = INACTIVE
+libfabric:156296:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank0: NIC unit_id 3 STATE = INACTIVE
+libfabric:156296:1730396878::psm3:core:psmx3_update_hfi_info():560<info> JF5300-B11A319T:rank0: hfi1 units: total 4, reported 1, active 1; hfi1 contexts: total 1024, free 1024
+libfabric:156296:1730396878::psm3:core:psmx3_update_hfi_info():572<info> JF5300-B11A319T:rank0: Tx/Rx contexts: 1024 in total, 1024 available.
+libfabric:156297:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank1: NIC unit_id 2 STATE = INACTIVE
+libfabric:156297:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A319T:rank1: NIC unit_id 3 STATE = INACTIVE
+libfabric:156297:1730396878::psm3:core:psmx3_update_hfi_info():560<info> JF5300-B11A319T:rank1: hfi1 units: total 4, reported 1, active 1; hfi1 contexts: total 1024, free 1024
+libfabric:156297:1730396878::psm3:core:psmx3_update_hfi_info():572<info> JF5300-B11A319T:rank1: Tx/Rx contexts: 1024 in total, 1024 available.
+libfabric:186329:1730396878::psm3:core:psmx3_init_lib():375<info> JF5300-B11A346T:rank3: PSM3 header version = (3, 0)
+libfabric:186329:1730396878::psm3:core:psmx3_init_lib():377<info> JF5300-B11A346T:rank3: PSM3 library version = (3, 0)
+libfabric:186329:1730396878::psm3:core:psmx3_init_lib():380<info> JF5300-B11A346T:rank3: PSM3 multi-ep feature enabled.
+libfabric:156296:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A319T:rank0: 2 instances available, 1 with CQ data flag set
+libfabric:156297:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A319T:rank1: 2 instances available, 1 with CQ data flag set
+libfabric:186328:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank2: NIC unit_id 2 STATE = INACTIVE
+libfabric:186328:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank2: NIC unit_id 3 STATE = INACTIVE
+libfabric:186328:1730396878::psm3:core:psmx3_update_hfi_info():560<info> JF5300-B11A346T:rank2: hfi1 units: total 4, reported 1, active 1; hfi1 contexts: total 1024, free 1024
+libfabric:186328:1730396878::psm3:core:psmx3_update_hfi_info():572<info> JF5300-B11A346T:rank2: Tx/Rx contexts: 1024 in total, 1024 available.
+libfabric:186329:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank3: NIC unit_id 0 STATE = INACTIVE
+libfabric:186328:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A346T:rank2: 2 instances available, 1 with CQ data flag set
+libfabric:186329:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank3: NIC unit_id 2 STATE = INACTIVE
+libfabric:186329:1730396878::psm3:core:psmx3_update_hfi_info():458<warn> JF5300-B11A346T:rank3: NIC unit_id 3 STATE = INACTIVE
+libfabric:186329:1730396878::psm3:core:psmx3_update_hfi_info():560<info> JF5300-B11A346T:rank3: hfi1 units: total 4, reported 1, active 1; hfi1 contexts: total 1024, free 1024
+libfabric:186329:1730396878::psm3:core:psmx3_update_hfi_info():572<info> JF5300-B11A346T:rank3: Tx/Rx contexts: 1024 in total, 1024 available.
+libfabric:156296:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:156296:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A319T:rank0: 
+libfabric:156296:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A319T:rank0: TAG60 instance included
+libfabric:156296:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A319T:rank0: TAG64 instance included
+libfabric:156297:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:156297:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A319T:rank1: 
+libfabric:156297:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A319T:rank1: TAG60 instance included
+libfabric:156297:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A319T:rank1: TAG64 instance included
+libfabric:186328:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:186328:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A346T:rank2: 
+libfabric:186328:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A346T:rank2: TAG60 instance included
+libfabric:186328:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A346T:rank2: TAG64 instance included
+libfabric:156296:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A319T:rank0: 2 instances available, 1 with CQ data flag set
+libfabric:156297:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A319T:rank1: 2 instances available, 1 with CQ data flag set
+libfabric:186328:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A346T:rank2: 2 instances available, 1 with CQ data flag set
+libfabric:186329:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A346T:rank3: 2 instances available, 1 with CQ data flag set
+libfabric:156297:1730396878::psm3:core:psmx3_fabric():89<info> JF5300-B11A319T:rank1: 
+libfabric:156297:1730396878::core:core:fi_fabric_():1611<info> Opened fabric: TCP-192.168.140.0/24
+libfabric:156297:1730396878::psm3:domain:psmx3_domain_open():307<info> JF5300-B11A319T:rank1: 
+libfabric:156297:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank1: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:156297:1730396878::psm3:core:psmx3_init_tag_layout():316<info> JF5300-B11A319T:rank1: use tag64: tag_mask: FFFFFFFFFFFFFFFF, data_mask: 0FFFFFFF
+libfabric:156297:1730396878::psm3:core:psmx3_trx_ctxt_alloc():301<info> JF5300-B11A319T:rank1: uuid: D3D70200-7024-E76A-C925-0600DB650E44
+libfabric:156297:1730396878::psm3:core:psmx3_trx_ctxt_alloc():315<info> JF5300-B11A319T:rank1: ep_open_opts: unit=1 port=0 addr_index=0
+libfabric:156296:1730396878::psm3:core:psmx3_fabric():89<info> JF5300-B11A319T:rank0: 
+libfabric:156296:1730396878::core:core:fi_fabric_():1611<info> Opened fabric: TCP-192.168.140.0/24
+libfabric:156296:1730396878::psm3:domain:psmx3_domain_open():307<info> JF5300-B11A319T:rank0: 
+libfabric:156296:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A319T:rank0: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:156296:1730396878::psm3:core:psmx3_init_tag_layout():316<info> JF5300-B11A319T:rank0: use tag64: tag_mask: FFFFFFFFFFFFFFFF, data_mask: 0FFFFFFF
+libfabric:156296:1730396878::psm3:core:psmx3_trx_ctxt_alloc():301<info> JF5300-B11A319T:rank0: uuid: D3D70200-7024-E76A-C925-0600DB650E44
+libfabric:156296:1730396878::psm3:core:psmx3_trx_ctxt_alloc():315<info> JF5300-B11A319T:rank0: ep_open_opts: unit=1 port=0 addr_index=0
+libfabric:186328:1730396878::psm3:core:psmx3_fabric():89<info> JF5300-B11A346T:rank2: 
+libfabric:186328:1730396878::core:core:fi_fabric_():1611<info> Opened fabric: TCP-192.168.140.0/24
+libfabric:186328:1730396878::psm3:domain:psmx3_domain_open():307<info> JF5300-B11A346T:rank2: 
+libfabric:186328:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank2: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:186328:1730396878::psm3:core:psmx3_init_tag_layout():316<info> JF5300-B11A346T:rank2: use tag64: tag_mask: FFFFFFFFFFFFFFFF, data_mask: 0FFFFFFF
+libfabric:186328:1730396878::psm3:core:psmx3_trx_ctxt_alloc():301<info> JF5300-B11A346T:rank2: uuid: D3D70200-7024-E76A-C925-0600DB650E44
+libfabric:186328:1730396878::psm3:core:psmx3_trx_ctxt_alloc():315<info> JF5300-B11A346T:rank2: ep_open_opts: unit=1 port=0 addr_index=0
+libfabric:186329:1730396878::core:core:fi_getinfo_():1318<info> Found provider with the highest priority psm3, must_use_util_prov = 0
+libfabric:186329:1730396878::psm3:core:psmx3_getinfo():714<info> JF5300-B11A346T:rank3: 
+libfabric:186329:1730396878::psm3:core:psmx3_init_prov_info():410<info> JF5300-B11A346T:rank3: TAG60 instance included
+libfabric:186329:1730396878::psm3:core:psmx3_init_prov_info():423<info> JF5300-B11A346T:rank3: TAG64 instance included
+libfabric:156297:1730396878::psm3:core:psmx3_trx_ctxt_alloc():327<info> JF5300-B11A319T:rank1: epid: 0xc0a88c7f0000017c:cf7cc0a5:0 (tx+rx)
+libfabric:156297:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank1: tagged ops optimized for op_flags=0 
+libfabric:156297:1730396878::psm3:ep_ctrl:psmx3_ep_open_internal():577<info> JF5300-B11A319T:rank1: skip initialization of op context list.
+libfabric:156297:1730396878::core:core:ofi_ns_add_local_name():372<warn> Cannot add local name - name server uninitialized
+libfabric:156297:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank1: epid 0xc0a88c7f0000017c:cf7cc0a5:0
+libfabric:156297:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank1: tagged ops optimized for op_flags=0 
+libfabric:156297:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank1: tagged ops optimized for op_flags=0 
+libfabric:156297:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank1: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:core:psmx3_alter_prov_info():694<info> JF5300-B11A346T:rank3: 2 instances available, 1 with CQ data flag set
+libfabric:156296:1730396878::psm3:core:psmx3_trx_ctxt_alloc():327<info> JF5300-B11A319T:rank0: epid: 0xc0a88c7f0000017c:e8759e41:0 (tx+rx)
+libfabric:156296:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank0: tagged ops optimized for op_flags=0 
+libfabric:156296:1730396878::psm3:ep_ctrl:psmx3_ep_open_internal():577<info> JF5300-B11A319T:rank0: skip initialization of op context list.
+libfabric:156296:1730396878::core:core:ofi_ns_add_local_name():372<warn> Cannot add local name - name server uninitialized
+libfabric:156296:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank0: epid 0xc0a88c7f0000017c:e8759e41:0
+libfabric:156296:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank0: tagged ops optimized for op_flags=0 
+libfabric:156296:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank0: tagged ops optimized for op_flags=0 
+libfabric:156296:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A319T:rank0: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:core:psmx3_fabric():89<info> JF5300-B11A346T:rank3: 
+libfabric:186329:1730396878::core:core:fi_fabric_():1611<info> Opened fabric: TCP-192.168.140.0/24
+libfabric:186329:1730396878::psm3:domain:psmx3_domain_open():307<info> JF5300-B11A346T:rank3: 
+libfabric:186329:1730396878::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank3: read int var FI_PSM3_LOCK_LEVEL=1
+libfabric:186329:1730396878::psm3:core:psmx3_init_tag_layout():316<info> JF5300-B11A346T:rank3: use tag64: tag_mask: FFFFFFFFFFFFFFFF, data_mask: 0FFFFFFF
+libfabric:186329:1730396878::psm3:core:psmx3_trx_ctxt_alloc():301<info> JF5300-B11A346T:rank3: uuid: D3D70200-7024-E76A-C925-0600DB650E44
+libfabric:186329:1730396878::psm3:core:psmx3_trx_ctxt_alloc():315<info> JF5300-B11A346T:rank3: ep_open_opts: unit=1 port=0 addr_index=0
+libfabric:186328:1730396878::psm3:core:psmx3_trx_ctxt_alloc():327<info> JF5300-B11A346T:rank2: epid: 0xc0a88c7a0000017c:9158a001:0 (tx+rx)
+libfabric:186328:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank2: tagged ops optimized for op_flags=0 
+libfabric:186328:1730396878::psm3:ep_ctrl:psmx3_ep_open_internal():577<info> JF5300-B11A346T:rank2: skip initialization of op context list.
+libfabric:186328:1730396878::core:core:ofi_ns_add_local_name():372<warn> Cannot add local name - name server uninitialized
+libfabric:186328:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank2: epid 0xc0a88c7a0000017c:9158a001:0
+libfabric:186328:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank2: tagged ops optimized for op_flags=0 
+libfabric:186328:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank2: tagged ops optimized for op_flags=0 
+libfabric:186328:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank2: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:core:psmx3_trx_ctxt_alloc():327<info> JF5300-B11A346T:rank3: epid: 0xc0a88c7a0000017c:91a38c4f:0 (tx+rx)
+libfabric:186329:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank3: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:ep_ctrl:psmx3_ep_open_internal():577<info> JF5300-B11A346T:rank3: skip initialization of op context list.
+libfabric:186329:1730396878::core:core:ofi_ns_add_local_name():372<warn> Cannot add local name - name server uninitialized
+libfabric:186329:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank3: epid 0xc0a88c7a0000017c:91a38c4f:0
+libfabric:186329:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank3: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank3: tagged ops optimized for op_flags=0 
+libfabric:186329:1730396878::psm3:ep_data:psmx3_ep_optimize_ops():94<info> JF5300-B11A346T:rank3: tagged ops optimized for op_flags=0 
+libfabric:156296:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank0: epid 0xc0a88c7f0000017c:e8759e41:0
+libfabric:156297:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank1: epid 0xc0a88c7f0000017c:cf7cc0a5:0
+libfabric:156296:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank0: epid 0xc0a88c7f0000017c:e8759e41:0
+libfabric:156297:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank1: epid 0xc0a88c7f0000017c:cf7cc0a5:0
+libfabric:186328:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank2: epid 0xc0a88c7a0000017c:9158a001:0
+libfabric:186328:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank2: epid 0xc0a88c7a0000017c:9158a001:0
+libfabric:186328:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank2: epid 0xc0a88c7a0000017c:9158a001:0
+libfabric:156296:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank0: epid 0xc0a88c7f0000017c:e8759e41:0
+libfabric:156297:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A319T:rank1: epid 0xc0a88c7f0000017c:cf7cc0a5:0
+libfabric:186329:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank3: epid 0xc0a88c7a0000017c:91a38c4f:0
+libfabric:186329:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank3: epid 0xc0a88c7a0000017c:91a38c4f:0
+libfabric:186329:1730396878::psm3:core:psmx3_am_init():66<info> JF5300-B11A346T:rank3: epid 0xc0a88c7a0000017c:91a38c4f:0
+[0] max rel diff with ref 0.012136247009038925
+tensor([1.8750, 1.5312, 1.4141,  ..., 2.0938, 1.7812, 2.8594],
+       dtype=torch.bfloat16)
+iteration 0 of 5iteration 1 of 5iteration 2 of 5iteration 3 of 5iteration 4 of 5iteration 5 of 5iteration 6 of 5num_elements = 67108864, dtype = torch.bfloat16, allreduce use ccl
+Average matrix multiplication duration = 0.6163 ms
+Average allreduce duration = 855.5209 ms
+libfabric:186329:1730396887::psm3:core:psmx3_fini():875<info> JF5300-B11A346T:rank3: 
+libfabric:186329:1730396887::psm3:core:psmx3_fini():893<info> JF5300-B11A346T:rank3: psmx3_active_fabric != NULL, skip psm3_finalize
+libfabric:156296:1730396887::psm3:core:psmx3_fini():875<info> JF5300-B11A319T:rank0: 
+libfabric:156296:1730396887::psm3:core:psmx3_fini():893<info> JF5300-B11A319T:rank0: psmx3_active_fabric != NULL, skip psm3_finalize
+libfabric:156297:1730396887::psm3:core:psmx3_fini():875<info> JF5300-B11A319T:rank1: 
+libfabric:156297:1730396887::psm3:core:psmx3_fini():893<info> JF5300-B11A319T:rank1: psmx3_active_fabric != NULL, skip psm3_finalize
+libfabric:186328:1730396887::psm3:core:psmx3_fini():875<info> JF5300-B11A346T:rank2: 
+libfabric:186328:1730396887::psm3:core:psmx3_fini():893<info> JF5300-B11A346T:rank2: psmx3_active_fabric != NULL, skip psm3_finalize

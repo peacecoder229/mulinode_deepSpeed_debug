@@ -1,0 +1,456 @@
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-12 08:44:19,528] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-11-12 08:44:20,685] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-11-12 08:44:20,689] [INFO] [runner.py:568:main] cmd = /root/miniforge3/envs/llm/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None --bind_cores_to_rank --bind_core_list=0-63,64-127 ./ds_comm_bench_compare_matmul_vs_allreduce.py --dtype bf16 --count 5 --warmup 2 --ccl --elements 67108864 --computeSz 1024 --ipex
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-12 08:44:22,618] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+[2024-11-12 08:44:23,820] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2024-11-12 08:44:23,820] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=2, node_rank=0
+[2024-11-12 08:44:23,820] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2024-11-12 08:44:23,820] [INFO] [launch.py:164:main] dist_world_size=2
+[2024-11-12 08:44:23,820] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2024-11-12 08:44:23,838] [INFO] [launch.py:256:main] process 141935 spawned with command: ['numactl', '-C', '0-63', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--local_rank=0', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex']
+[2024-11-12 08:44:23,855] [INFO] [launch.py:256:main] process 141938 spawned with command: ['numactl', '-C', '64-127', '/root/miniforge3/envs/llm/bin/python', '-u', './ds_comm_bench_compare_matmul_vs_allreduce.py', '--local_rank=1', '--dtype', 'bf16', '--count', '5', '--warmup', '2', '--ccl', '--elements', '67108864', '--computeSz', '1024', '--ipex']
+My guessed rank = 0
+My guessed rank = 1
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-12 08:44:25,671] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+/root/miniforge3/envs/llm/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:270: UserWarning: Device capability of ccl unspecified, assuming `cpu` and `cuda`. Please specify it via the `devices` argument of `register_backend`.
+  warnings.warn(
+Warning: Cannot load xpu CCL. CCL doesn't work for XPU device due to /root/miniforge3/envs/llm/lib/python3.10/site-packages/oneccl_bindings_for_pytorch/lib/liboneccl_bindings_for_pytorch_xpu.so: cannot open shared object file: No such file or directory
+[2024-11-12 08:44:25,703] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cpu (auto detect)
+nkbhat_dbg: reporting from init_distributed
+[2024-11-12 08:44:26,941] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-12 08:44:26,941] [INFO] [comm.py:638:init_distributed] cdb=None
+nkbhat_dbg: dist_init_required is True
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/deepspeed_shm_comm/build.ninja...
+nkbhat_dbg: reporting from init_distributed
+[2024-11-12 08:44:26,978] [INFO] [comm.py:161:init_deepspeed_backend] Initialize ccl backend
+[2024-11-12 08:44:26,978] [INFO] [comm.py:638:init_distributed] cdb=None
+nkbhat_dbg: dist_init_required is True
+[2024-11-12 08:44:26,978] [INFO] [comm.py:670:init_distributed] Initializing TorchBackend in DeepSpeed with backend ccl
+Building extension module deepspeed_shm_comm...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+ninja: no work to do.
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.06103777885437012 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+Loading extension module deepspeed_shm_comm...
+Time to load deepspeed_shm_comm op: 0.10101842880249023 seconds
+DeepSpeed deepspeed.ops.comm.deepspeed_shm_comm_op built successfully
+MPI startup(): Pinning environment could not be initialized correctly. Intel MPI process pinning will not be used.
+               Possible reason: Using Slurm's srun or other job submission commands from other job schedulers to launch your MPI job. In this case, job scheduler specified pinning will be used.
+Warning: HBM win policy, I_MPI_RETURN_WIN_MEM_NUMA not set
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.12  Build 20240202 (id: c8dd3f5)
+[0] MPI startup(): Copyright (C) 2003-2024 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric loaded: libfabric.so.1 
+[0] MPI startup(): libfabric version: 1.18.1-impi
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141935:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141935:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141935:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141935:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141935:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141935:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:141935:1731429869::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141935:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:141935:1731429869::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:141935:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:141935:1731429869::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141935:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141935:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141935:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+MPI startup(): Pinning environment could not be initialized correctly. Intel MPI process pinning will not be used.
+               Possible reason: Using Slurm's srun or other job submission commands from other job schedulers to launch your MPI job. In this case, job scheduler specified pinning will be used.
+Warning: HBM win policy, I_MPI_RETURN_WIN_MEM_NUMA not set
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.12  Build 20240202 (id: c8dd3f5)
+[0] MPI startup(): Copyright (C) 2003-2024 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric loaded: libfabric.so.1 
+[0] MPI startup(): libfabric version: 1.18.1-impi
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141938:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141938:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141938:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141938:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141938:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141938:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:141938:1731429869::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141938:1731429869::core:mr:ofi_default_cache_size():79<info> default cache size=1056021416
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: verbs (118.10)
+libfabric:141938:1731429869::core:core:ofi_register_provider():503<info> "verbs" filtered by provider include/exclude list, skipping
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: tcp (118.10)
+libfabric:141938:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_ZE not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():444<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: shm (119.0)
+libfabric:141938:1731429869::core:core:ofi_register_provider():503<info> "shm" filtered by provider include/exclude list, skipping
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_CUDA not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_ROCR not supported
+libfabric:141938:1731429869::core:core:ze_hmem_dl_init():497<warn> Failed to dlopen libze_loader.so
+libfabric:141938:1731429869::core:core:ofi_hmem_init():421<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_NEURON not supported
+libfabric:141938:1731429869::core:core:ofi_hmem_init():416<info> Hmem iface FI_HMEM_SYNAPSEAI not supported
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: ofi_rxm (118.10)
+libfabric:141935:1731429869::psm3:core:fi_prov_ini():921<info> JF5300-B11A346T:rank0: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank0: variable FI_PSM3_NAME_SERVER=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank0: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank0: variable FI_PSM3_UUID=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank0: read int var FI_PSM3_DELAY=0
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank0: variable FI_PSM3_TIMEOUT=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank0: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank0: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank0: read int var FI_PSM3_INJECT_SIZE=32768
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank0: read int var FI_PSM3_LOCK_LEVEL=0
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank0: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank0: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank0: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank0: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:141935:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank0: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:141935:1731429869::core:core:ofi_register_provider():503<info> "psm3" filtered by provider include/exclude list, skipping
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:141935:1731429869::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:141935:1731429869::core:core:fi_getinfo_():1318<info> Found provider with the highest priority tcp, must_use_util_prov = 0
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141935:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+libfabric:141938:1731429869::psm3:core:fi_prov_ini():921<info> JF5300-B11A346T:rank1: build options: VERSION=705.1000=7.5.1.0, HAVE_PSM3_SRC=1, PSM3_CUDA=0
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank1: variable FI_PSM3_NAME_SERVER=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank1: variable FI_PSM3_TAGGED_RMA=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank1: variable FI_PSM3_UUID=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank1: read int var FI_PSM3_DELAY=0
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank1: variable FI_PSM3_TIMEOUT=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank1: variable FI_PSM3_PROG_INTERVAL=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank1: variable FI_PSM3_PROG_AFFINITY=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank1: read int var FI_PSM3_INJECT_SIZE=32768
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():113<info> JF5300-B11A346T:rank1: read int var FI_PSM3_LOCK_LEVEL=0
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank1: variable FI_PSM3_LAZY_CONN=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_int():109<info> JF5300-B11A346T:rank1: variable FI_PSM3_CONN_TIMEOUT=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank1: variable FI_PSM3_DISCONNECT=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_str():124<info> JF5300-B11A346T:rank1: variable FI_PSM3_TAG_LAYOUT=<not set>
+libfabric:141938:1731429869::psm3:core:psmx3_param_get_bool():94<info> JF5300-B11A346T:rank1: variable FI_PSM3_YIELD_MODE=<not set>
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: psm3 (705.1000)
+libfabric:141938:1731429869::core:core:ofi_register_provider():503<info> "psm3" filtered by provider include/exclude list, skipping
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: ofi_hook_noop (118.10)
+libfabric:141938:1731429869::core:core:ofi_register_provider():476<info> registering provider: off_coll (118.10)
+libfabric:141938:1731429869::core:core:fi_getinfo_():1318<info> Found provider with the highest priority tcp, must_use_util_prov = 0
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141935:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141938:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141935:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+[0] MPI startup(): max_ch4_vnis: 1, max_reg_eps 64, enable_sep 0, enable_shared_ctxs 0, do_av_insert 0
+[0] MPI startup(): max number of MPI_Request per vci: 67108864 (pools: 1)
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::core:core:fi_getinfo_():1318<info> Found provider with the highest priority tcp, must_use_util_prov = 0
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141938:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141935:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141935:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141935:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+[0] MPI startup(): libfabric provider: tcp
+[0] MPI startup(): detected tcp provider, set device name to "tcp"
+libfabric:141935:1731429869::core:core:fi_fabric_():1611<info> Opened fabric: 192.168.140.0/24
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141935:1731429869::tcp:av:util_verify_av_attr():515<warn> Shared AV is unsupported
+libfabric:141935:1731429869::tcp:av:util_av_init():486<info> AV size 1
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141935:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+[0] MPI startup(): addrnamelen: 16
+libfabric:141935:1731429869::tcp:av:ofi_av_insert_addr():291<info> inserting addr: fi_sockaddr_in://192.168.140.122:41499
+libfabric:141935:1731429869::tcp:av:ofi_av_insert_addr():314<info> fi_addr: 0
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_rdm_setopt():679<info> FI_OPT_MIN_MULTI_RECV set to 16384
+[0] MPI startup(): selected platform: unknown
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp_100_x1.dat" not found
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp_100.dat" not found
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp.dat" not found
+[0] MPI startup(): Load tuning file: "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi.dat"
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141938:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+[0] MPI startup(): max_ch4_vnis: 1, max_reg_eps 64, enable_sep 0, enable_shared_ctxs 0, do_av_insert 0
+[0] MPI startup(): max number of MPI_Request per vci: 67108864 (pools: 1)
+libfabric:141938:1731429869::core:core:fi_getinfo_():1318<info> Found provider with the highest priority tcp, must_use_util_prov = 0
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+[0] MPI startup(): threading: mode: direct
+[0] MPI startup(): threading: vcis: 1
+[0] MPI startup(): threading: app_threads: 1
+[0] MPI startup(): threading: runtime: generic
+[0] MPI startup(): threading: progress_threads: 1
+[0] MPI startup(): threading: async_progress: 0
+[0] MPI startup(): threading: lock_level: global
+[0] MPI startup(): threading: num_pools: 1
+[0] MPI startup(): threading: enable_sep: 0
+[0] MPI startup(): threading: direct_recv: 1
+[0] MPI startup(): threading: zero_op_flags: 1
+[0] MPI startup(): threading: num_am_buffers: 1
+[0] MPI startup(): tag bits available: 19 (TAG_UB value: 524287) 
+[0] MPI startup(): source bits available: 20 (Maximal number of rank: 1048575) 
+[0] MPI startup(): Number of NICs:  1 
+[0] MPI startup(): ===== NIC pinning on JF5300-B11A346T =====
+[0] MPI startup(): Rank    Pin nic   Nic Id
+[0] MPI startup(): 0       ens11np0  0
+[0] MPI startup(): THREAD_SPLIT mode is switched on, 1 endpoints in use
+[0] MPI startup(): ===== CPU pinning =====
+[0] MPI startup(): Rank    Pid      Node name        Pin cpu
+[0] MPI startup(): 0       141935   JF5300-B11A346T  0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+[0] MPI startup(): I_MPI_ROOT=/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi
+[0] MPI startup(): I_MPI_OFI_ISEND_INJECT_THRESHOLD=0
+[0] MPI startup(): I_MPI_MULTIRAIL=1
+[0] MPI startup(): I_MPI_THREAD_SPLIT=1
+[0] MPI startup(): I_MPI_THREAD_RUNTIME=generic
+[0] MPI startup(): I_MPI_THREAD_ID_KEY=vci
+[0] MPI startup(): I_MPI_THREAD_MAX=1
+[0] MPI startup(): I_MPI_THREAD_LOCK_LEVEL=global
+[0] MPI startup(): I_MPI_DEBUG=120
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 10.242.51.116, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: 192.168.140.122, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::9a4f:eeff:fe00:e1b5, iface name: enp1s0, speed: 1000
+libfabric:141938:1731429869::tcp:core:ofi_get_list_of_addr():2148<info> Available addr: fe80::ba59:9fff:fecd:ea0e, iface name: ens11np0, speed: 100000
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1978<info> available addr: : fi_sockaddr_in://127.0.0.1:0
+libfabric:141938:1731429869::tcp:core:ofi_insert_loopback_addr():1993<info> available addr: : fi_sockaddr_in6://[::1]:0
+libfabric:141938:1731429869::tcp:core:util_getinfo_ifs():342<info> Chosen addr for using: 192.168.140.122, speed 100000
+[0] MPI startup(): libfabric provider: tcp
+[0] MPI startup(): detected tcp provider, set device name to "tcp"
+libfabric:141938:1731429869::core:core:fi_fabric_():1611<info> Opened fabric: 192.168.140.0/24
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141938:1731429869::tcp:av:util_verify_av_attr():515<warn> Shared AV is unsupported
+libfabric:141938:1731429869::tcp:av:util_av_init():486<info> AV size 1
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_MSG
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141938:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+[0] MPI startup(): addrnamelen: 16
+libfabric:141938:1731429869::tcp:av:ofi_av_insert_addr():291<info> inserting addr: fi_sockaddr_in://192.168.140.122:42485
+libfabric:141938:1731429869::tcp:av:ofi_av_insert_addr():314<info> fi_addr: 0
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_rdm_setopt():679<info> FI_OPT_MIN_MULTI_RECV set to 16384
+[0] MPI startup(): selected platform: unknown
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp_100_x1.dat" not found
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp_100.dat" not found
+[0] MPI startup(): File "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi_tcp.dat" not found
+[0] MPI startup(): Load tuning file: "/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi/etc/tuning_skx_shm-ofi.dat"
+[0] MPI startup(): threading: mode: direct
+[0] MPI startup(): threading: vcis: 1
+[0] MPI startup(): threading: app_threads: 1
+[0] MPI startup(): threading: runtime: generic
+[0] MPI startup(): threading: progress_threads: 1
+[0] MPI startup(): threading: async_progress: 0
+[0] MPI startup(): threading: lock_level: global
+[0] MPI startup(): threading: num_pools: 1
+[0] MPI startup(): threading: enable_sep: 0
+[0] MPI startup(): threading: direct_recv: 1
+[0] MPI startup(): threading: zero_op_flags: 1
+[0] MPI startup(): threading: num_am_buffers: 1
+[0] MPI startup(): tag bits available: 19 (TAG_UB value: 524287) 
+[0] MPI startup(): source bits available: 20 (Maximal number of rank: 1048575) 
+[0] MPI startup(): Number of NICs:  1 
+[0] MPI startup(): ===== NIC pinning on JF5300-B11A346T =====
+[0] MPI startup(): Rank    Pin nic   Nic Id
+[0] MPI startup(): 0       ens11np0  0
+[0] MPI startup(): THREAD_SPLIT mode is switched on, 1 endpoints in use
+[0] MPI startup(): ===== CPU pinning =====
+[0] MPI startup(): Rank    Pid      Node name        Pin cpu
+[0] MPI startup(): 0       141938   JF5300-B11A346T  64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127
+[0] MPI startup(): I_MPI_ROOT=/home/rdas/LLM/intel-extension-for-pytorch/examples/cpu/llm/oneCCL_release/opt/mpi
+[0] MPI startup(): I_MPI_OFI_ISEND_INJECT_THRESHOLD=0
+[0] MPI startup(): I_MPI_MULTIRAIL=1
+[0] MPI startup(): I_MPI_THREAD_SPLIT=1
+[0] MPI startup(): I_MPI_THREAD_RUNTIME=generic
+[0] MPI startup(): I_MPI_THREAD_ID_KEY=vci
+[0] MPI startup(): I_MPI_THREAD_MAX=1
+[0] MPI startup(): I_MPI_THREAD_LOCK_LEVEL=global
+[0] MPI startup(): I_MPI_DEBUG=120
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141935:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNREQ
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_process_connreq():422<info> connreq for 0x560bc2bac040
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_process_connreq():444<info> loopback conn 0x560bc2bac040
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141935:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141935:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141935:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNECTED
+libfabric:141935:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNECTED
+libfabric:141935:1731429869::tcp:ep_data:xnet_handle_truncate():161<warn> msg recv truncated
+Abort(204030222) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Comm_create_group: Unknown error class, error stack:
+PMPI_Comm_create_group(224).........: MPI_Comm_create_group(MPI_COMM_WORLD, group=0x88000003, 0, new_comm=0x7ffddc6c9fd8) failed
+PMPI_Comm_create_group(206).........: 
+MPIR_Comm_create_group(59)..........: 
+MPIR_Get_contextid_sparse_group(486): 
+MPII_Allreduce_group(351)...........: 
+MPII_Allreduce_group_intra(294).....: 
+(unknown)(): Unknown error class
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141938:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNREQ
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_process_connreq():422<info> connreq for 0x562af0836040
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_process_connreq():444<info> loopback conn 0x562af0836040
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1060<info> Unsupported capabilities
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Supported: FI_MSG, FI_RMA, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT
+libfabric:141938:1731429869::tcp:core:ofi_check_info():1061<info> Requested: FI_MSG, FI_RMA, FI_TAGGED, FI_READ, FI_WRITE, FI_RECV, FI_SEND, FI_REMOTE_READ, FI_REMOTE_WRITE, FI_MULTI_RECV, FI_RMA_PMEM, FI_LOCAL_COMM, FI_REMOTE_COMM, FI_RMA_EVENT, FI_SOURCE, FI_DIRECTED_RECV
+libfabric:141938:1731429869::tcp:core:ofi_check_rx_attr():805<info> Tx only caps ignored in Rx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_tx_attr():903<info> Rx only caps ignored in Tx caps
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():667<info> unsupported endpoint type
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Supported: FI_EP_RDM
+libfabric:141938:1731429869::tcp:core:ofi_check_ep_type():668<info> Requested: FI_EP_MSG
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNECTED
+libfabric:141938:1731429869::tcp:ep_ctrl:xnet_handle_event_list():519<info> event FI_CONNECTED
+libfabric:141938:1731429869::tcp:ep_data:xnet_handle_truncate():161<warn> msg recv truncated
+Abort(69812494) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Comm_create_group: Unknown error class, error stack:
+PMPI_Comm_create_group(224).........: MPI_Comm_create_group(MPI_COMM_WORLD, group=0x88000003, 0, new_comm=0x7ffcc20bcf28) failed
+PMPI_Comm_create_group(206).........: 
+MPIR_Comm_create_group(59)..........: 
+MPIR_Get_contextid_sparse_group(486): 
+MPII_Allreduce_group(351)...........: 
+MPII_Allreduce_group_intra(294).....: 
+(unknown)(): Unknown error class
